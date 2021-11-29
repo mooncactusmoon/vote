@@ -22,6 +22,17 @@ $pdo=new PDO($dsn,'root','');
 }
 
 
+ //計算符合條件的資料筆數
+ function rows($table,$array){
+    global $pdo;
+    $sql="SELECT count(*) FROM `$table` WHERE ";
+        foreach($array as $key=>$value){
+            $tmp[]="`$key`='$value'";
+        }
+        
+        $sql=$sql. implode(" AND ",$tmp);
+    return $pdo->query($sql)->fetchColumn();
+}
 
 //取出指定資料表的所有資料
 function all($table,...$arg){
