@@ -9,6 +9,6 @@ $opt['count']=$opt['count']+1;
 
 update('options',['count'=>$opt['count']],['id'=>$opt_id]);
 
-to("../index.php?do=vote_result&id={$opt_id}");
+to("../index.php?do=vote_result&id={$opt['topic_id']}");
 
 ?>
