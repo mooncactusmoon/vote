@@ -13,4 +13,7 @@ foreach($_POST['options'] as $opt){
     $opt_array=["opt"=>$opt,"topic_id"=>$topic['id']];
     insert('options',$opt_array);
 }
+
+//新增完之後回首頁
+to("../index.php")
 ?>
