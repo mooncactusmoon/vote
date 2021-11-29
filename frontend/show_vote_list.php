@@ -18,9 +18,9 @@ foreach ($subjects as $key => $value) {
     echo "</span>";
     
     //看結果按鈕
-    echo "<span class='d-inline-block col-md-2 text-center'>";
+    echo "<a href='?do=vote_result&id={$value['id']}' class='d-inline-block col-md-2 text-center'>";
     echo "<button class='btn-info'>觀看結果</button>";
-    echo "</span>";
+    echo "</a>";
 
     echo "</li>";
 }
