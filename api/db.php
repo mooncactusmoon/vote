@@ -103,4 +103,10 @@ if(is_array($id)){
 return $pdo->exec($sql);
 }
 
+//dd 為 direct dump 縮寫表示
+function dd($array){
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
+}
 ?>
