@@ -1,3 +1,4 @@
+<?php include_once "../api/db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,46 +16,46 @@
 <body>
 
 
-<div class="jumbotron">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="123">
+<div class="jumbotron p-0" style="overflow:hidden;height:200px;">
+<a href="index.php">
+    <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
+        <div class="carousel-inner position-absolute" style="top:-250px;">
+            <div class="carousel-item active">
+                <img src="../img/dessert-02.jpg" class="d-block w-100" alt="123">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/dessert-06.jpg" class="d-block w-100" alt="321">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/dessert-07.jpg" class="d-block w-100" alt="000">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="321">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="000">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+</a>
 </div>
-</div>
-    
-<?php
+
+<div class="container">
+
+    <?php
     //判斷有沒有傳值，來決定顯現畫面
-    $do=(isset($_GET['do']))?$_GET['do']:'add_subject_form';
+    $do=(isset($_GET['do']))?$_GET['do']:'manage_vote';
     $file=$do.".php";
     if(file_exists($file)){
         include $file;
     }else{
-        include "add_subject_form.php";
+        include "manage_vote.php";
     }
-
-?>
+    
+    ?>
+</div>
 
 <div class="p-3 text-center text-light bg-dark fixed-bottom">
     &copy;cacuts月
