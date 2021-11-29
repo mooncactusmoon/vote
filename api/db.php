@@ -114,6 +114,16 @@ if(is_array($id)){
 return $pdo->exec($sql);
 }
 
+function to($url){
+    header("location:$url");
+}
+
+//任意查詢函式
+function q($sql){
+    global $pdo;
+    return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
+
 //dd 為 direct dump 縮寫表示
 function dd($array){
     echo "<pre>";

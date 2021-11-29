@@ -9,7 +9,9 @@
     <title>問卷系統</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
-
+        body{
+            background-color: #f2f5f5;
+        }
     </style>
 </head>
 
@@ -39,8 +41,10 @@
   </a>
 </div>
 </div>
-    
-<?php
+
+<div class="container">
+
+    <?php
     //判斷有沒有傳值，來決定顯現畫面
     $do=(isset($_GET['do']))?$_GET['do']:'show_vote_list';
     $file="./frontend/".$do.".php";
@@ -49,8 +53,9 @@
     }else{
         include "./frontend/show_vote_list.php";
     }
-
-?>
+    
+    ?>
+</div>
 
 <div class="p-3 text-center text-light bg-dark fixed-bottom">
     &copy;cacuts月
