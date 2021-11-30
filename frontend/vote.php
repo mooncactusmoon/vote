@@ -12,11 +12,14 @@ $options=all('options',['topic_id'=>$id]);
 
     <?php
     foreach ($options as $key => $opt){
-        echo "<li>";
-        //多選的話 name='opt[]'  單選擇可以不用加[]
-        echo "<input type='radio' name='opt' value='{$opt['id']}'>";
-        echo $opt['opt'];    
-        echo "</li>";    
+        if($opt['opt']!=""){
+
+            echo "<li>";
+            //多選的話 name='opt[]'  單選擇可以不用加[]
+            echo "<input type='radio' name='opt' value='{$opt['id']}'>";
+            echo $opt['opt'];    
+            echo "</li>";    
+        }
     }
     
     ?>
