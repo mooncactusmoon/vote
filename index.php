@@ -12,6 +12,9 @@
         body{
             background-color: #f2f5f5;
         }
+        .container{
+            min-height: 596px;
+        }
     </style>
 </head>
 
@@ -84,7 +87,7 @@ if(isset($_SESSION['user'])){
     ?>
 </div>
 
-<div class="p-3 text-center text-light bg-dark fixed-bottom">
+<div class="p-3 text-center text-light bg-dark">
     &copy;cacuts月
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
