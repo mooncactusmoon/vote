@@ -17,8 +17,8 @@
 
 <body>
 
-
-<div class="jumbotron p-0" style="overflow:hidden;height:200px;">
+<!-- 輪播 -->
+<div class="jumbotron p-0 mb-0" style="overflow:hidden;height:200px;">
 <a href="?">
 
     <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
@@ -44,7 +44,31 @@
     </div>
 </a>
 </div>
+<!-- 輪播 end -->
 
+<!-- nav -->
+<nav class="bg-light shadow-sm py-3 px-2 text-right mb-4 d-flex justify-content-between">
+    <div>&nbsp;</div>
+<?php
+
+if(isset($_SESSION['error'])){
+    echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
+}
+
+if(isset($_SESSION['user'])){
+    echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+    echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+}else{
+?>
+<div class="">
+    <a href="?do=login" class="mr-2 btn-sm btn-warning">會員登入</a>
+    <a href="?do=reg" class=" btn-sm  btn-warning">註冊新會員</a>
+</div>
+<?php
+}
+?>
+</nav>
+<!-- nav end -->
 <div class="container">
 
     <?php
