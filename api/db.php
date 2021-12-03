@@ -2,6 +2,7 @@
 
 $dsn="mysql:host=localhost;charset=utf8;dbname=vote";
 $pdo=new PDO($dsn,'root','');
+session_start();
 
  //取得符合條件的一筆資料
  function find($table,$id){

@@ -1,4 +1,8 @@
-<h1>所有的問題表單</h1>
+<h1>所有的問卷表單 
+    <a href="?do=add_subject_form">
+        <button class="btn btn-info rounded">新增問卷</button>
+    </a>
+</h1>
 <?php
 $subjects=all('topics');
 echo "<ol class='list-group'>";

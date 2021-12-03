@@ -9,7 +9,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     <label>問卷主題 : <input type="text" name="topic" value="<?=$subject['topic'];?>" ></label>
     <input type="hidden" name="topic_id" value="<?=$subject['id'];?>">
     <!-- button標籤預設是submit,所以如果不要跳轉畫面要給他type="button"//input:button -->
-    <!-- 增加選項 -->
+    <!-- 增加選項(使用後端的方式，注意!按鈕選下去就會轉畫面，尚未submit的編輯選項就會不見) -->
     <a href="../api/add_option.php?id=<?=$subject['id'];?>">
         <button class="bg-warning rounded" style="font-size:18px;" type="button">+</button>
     </a>

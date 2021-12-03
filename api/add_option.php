@@ -1,5 +1,5 @@
 <?php include_once "db.php";?>
-<!-- 讓題目增加選項 -->
+<!-- 讓題目增加選項框 -->
 <?php
 
 $id=$_GET['id'];
