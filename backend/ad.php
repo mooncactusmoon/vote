@@ -40,13 +40,17 @@
 
             echo "<td>{$row['intro']}</td>";
             echo "<td>";
+
+            echo "<a href='../api/change_status.php?id={$row['id']}'>";
             echo ($row['sh']==1)?"顯示中":"未上架";
-            echo "</td>";
+            echo "</a></td>";
+
             echo "<td>";
-            echo "<button>修改</button>";
+            echo "<a class='btn btn-info' href='?do=edit_ad&id={$row['id']}'>修改</a>";
             echo "<button>重新上傳</button>";
-            echo "<button>刪除</button>";
+            echo "<a class='btn btn-danger' href='../api/del_ad.php?id={$row['id']}'>刪除</a>";
             echo "</td>";
+
             echo "</tr>";
             
         }

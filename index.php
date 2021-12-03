@@ -26,15 +26,17 @@
 
     <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
         <div class="carousel-inner position-absolute" style="top:-250px;">
-            <div class="carousel-item active">
-                <img src="./img/dessert-02.jpg" class="d-block w-100" alt="123">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/dessert-06.jpg" class="d-block w-100" alt="321">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/dessert-07.jpg" class="d-block w-100" alt="000">
-            </div>
+        <?php
+            $images=all('ad',['sh'=>1]);
+            foreach($images as $key => $image){
+                if($key==0){
+                    echo "<div class='carousel-item active'>";
+                }else{
+                    echo "<div class='carousel-item'>";
+                }
+            echo "<img src='./img/{$image['name']}' alt='{$image['intro']}' class='d-block w-100'></div>";
+            }
+        ?> 
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
