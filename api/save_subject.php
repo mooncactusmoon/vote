@@ -10,8 +10,10 @@ $topic_sql="select * from `topics` where `topic`='{$_POST['subject']}'";
 $topic=$pdo->query($topic_sql)->fetch();
 $topic['id'];
 foreach($_POST['options'] as $opt){
-    $opt_array=["opt"=>$opt,"topic_id"=>$topic['id']];
-    insert('options',$opt_array);
+    if($opt!=""){
+        $opt_array=["opt"=>$opt,"topic_id"=>$topic['id']];
+        insert('options',$opt_array);
+    }
 }
 
 //新增完之後回首頁
