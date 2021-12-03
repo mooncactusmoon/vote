@@ -1,4 +1,11 @@
 <?php include_once "../api/db.php" ?>
+<?php
+if(!isset($_SESSION['user'])){
+    to("../index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,20 +22,27 @@
 
 <body>
 
+<!-- 輪播  用陣列去顯示圖片-->
 
-<div class="jumbotron p-0" style="overflow:hidden;height:200px;">
+<div class="jumbotron p-0 mb-0" style="overflow:hidden;height:200px;">
 <a href="index.php">
     <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
         <div class="carousel-inner position-absolute" style="top:-250px;">
-            <div class="carousel-item active">
-                <img src="../img/dessert-02.jpg" class="d-block w-100" alt="123">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/dessert-06.jpg" class="d-block w-100" alt="321">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/dessert-07.jpg" class="d-block w-100" alt="000">
-            </div>
+<?php
+$images=['dessert-02.jpg','dessert-06.jpg','dessert-07.jpg'];
+foreach($images as $key => $image){
+    if($key==0){
+
+        echo "<div class='carousel-item active'>";
+    }else{
+        echo "<div class='carousel-item'>";
+
+    }
+    echo "<img src='../img/{$image}' class='d-block w-100'></div>";
+}
+
+
+?>      
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,6 +55,30 @@
     </div>
 </a>
 </div>
+<!-- 輪播 end -->
+
+<!-- nav -->
+<nav class="bg-light shadow-sm py-3 px-2 text-right mb-4 d-flex justify-content-between">
+    <div>
+        <!-- 放置功能 -->
+        <a class="px-2" href="?do=show_vote_list">問卷管理</a>
+        <a class="px-2" href="?do=member">會員管理</a>
+        <a class="px-2" href="?do=ad">廣告管理</a>
+    </div>
+<?php
+
+if(isset($_SESSION['error'])){
+    echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
+}
+
+if(isset($_SESSION['user'])){
+    echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+    echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+}
+?>
+</nav>
+<!-- nav end -->
+
 
 <div class="container">
 
