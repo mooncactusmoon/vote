@@ -20,7 +20,14 @@
         </tr>
         <tr>
             <td>性別 : </td>
-            <td><input type="text" name="gender" ></td>
+            <td>
+            <input type="radio" id="man" name="gender" value="man">
+                            <label for="man">man&nbsp;</label>
+                            <input type="radio" id="woman" name="gender" value="woman">
+                            <label for="woman">woman&nbsp;</label>
+                            <input type="radio" id="third_gender" name="gender" value="third_gender">
+                            <label for="third_gender">Third gender</label>
+            </td>
         </tr>
         <tr>
             <td>生日 : </td>
