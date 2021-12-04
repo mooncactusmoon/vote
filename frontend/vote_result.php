@@ -26,6 +26,10 @@ $rows=q($sql);
             echo "</li>";
         }
     }
+
+    //顯示總投票人數
+    $count=q("select sum(`count`) as 'total' from `options` where `topic_id`='{$_GET['id']}'");
+    echo "total : ". $count[0]['total'] ;
 ?>
 
 </ol>
