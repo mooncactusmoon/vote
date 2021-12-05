@@ -24,11 +24,11 @@ if(!isset($_SESSION['user'])){
       header{
           height: 200px;
       }
-      main{
+      section{
             height:620px;
             overflow: scroll;
         }
-      main::-webkit-scrollbar {
+      section::-webkit-scrollbar {
         display: none;
         }
       .ad{

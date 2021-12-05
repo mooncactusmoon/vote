@@ -17,11 +17,11 @@
         header{
             height: 200px;
         }
-        main{
+        section{
             height:624.5px;
             overflow: scroll;
         }
-        main::-webkit-scrollbar {
+        section::-webkit-scrollbar {
         display: none;
         }
         .ad{
