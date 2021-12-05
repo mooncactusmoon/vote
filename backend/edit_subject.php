@@ -4,9 +4,9 @@ $subject=find('topics',$_GET['id']);
 $options=all('options',['topic_id'=>$_GET['id']]);
 
 ?>
-
-<form action="../api/edit_subject.php" method='post' class='col-6 m-auto'>
-    <label>問卷主題 : <input type="text" name="topic" value="<?=$subject['topic'];?>" ></label>
+<h2 class="text-center mt-3 font-weight-bold">編輯投票問卷</h2>
+<form action="../api/edit_subject.php" method='post' class='col-6 mt-3 mx-auto'>
+    <label>投票主題 : <input type="text" name="topic" value="<?=$subject['topic'];?>" ></label>
     <input type="hidden" name="topic_id" value="<?=$subject['id'];?>">
     <!-- button標籤預設是submit,所以如果不要跳轉畫面要給他type="button"//input:button -->
     <!-- 增加選項(使用後端的方式，注意!按鈕選下去就會轉畫面，尚未submit的編輯選項就會不見) -->
@@ -35,5 +35,5 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     //     }
     // }
     ?>
-<input type="submit" value="送出">
+<input type="submit" value="送出" class="btn btn-primary mt-3 ">
 </form>

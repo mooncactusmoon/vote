@@ -1,5 +1,5 @@
 <?php include_once "../api/db.php"; ?>
-<h2 class="text-center font-weight-bold">修改輪播圖</h2>
+<h2 class="text-center mt-3 font-weight-bold">修改輪播圖</h2>
 <?php
 $ad=find('ad',$_GET['id']);
 

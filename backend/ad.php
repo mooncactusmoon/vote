@@ -1,5 +1,5 @@
 <!-- 廣告管理 -->
-<h2 class="text-center font-weight-bold">輪播圖片管理</h2>
+<h2 class="text-center mt-3 font-weight-bold">輪播圖片管理</h2>
 
 <div class="row ">
     <div class="col-md-3">

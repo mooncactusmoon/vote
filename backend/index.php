@@ -19,6 +19,7 @@ if(!isset($_SESSION['user'])){
       
       body{
           background-color: #f2f5f5;
+          font-family: Microsoft JhengHei;
       }
 
       header{
@@ -132,7 +133,7 @@ if(isset($_SESSION['user'])){
     <div class="row-cols-1 text-center d-flex flex-column">
         <?php
         if(isset($_SESSION['user'])){
-            echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+            echo "<span class='pr-5 '>{$_SESSION['user']}的工作列 : )</span>";
             echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
         }
         ?>

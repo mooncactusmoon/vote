@@ -6,7 +6,7 @@ $subject=find('topics',$id);
 $options=all('options',['topic_id'=>$id]);
 
 ?>
-<h1><?=$subject['topic'];?></h1>
+<h2 class="text-center mt-3 font-weight-bold"><?=$subject['topic'];?></h2>
 <ol class="list-group">
 <form action="./api/save_vote.php" method="post">
 

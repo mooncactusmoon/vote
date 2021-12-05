@@ -1,5 +1,5 @@
 
-<h2 class="text-center">註冊</h2>
+<h2 class="text-center mt-3 font-weight-bold">註冊</h2>
 <div class="container" style="height:508px">
 <form action="./api/reg.php" method="post" id="regForm" class="text-center">
     <table class="m-auto">

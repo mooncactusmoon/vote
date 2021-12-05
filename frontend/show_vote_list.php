@@ -1,4 +1,4 @@
-<h1>投票題目表列</h1>
+<h2 class="text-center mt-3 font-weight-bold">投票題目表列</h2>
 <?php
 $subjects=all('topics');
 echo "<ol class='list-group'>";
@@ -9,7 +9,7 @@ foreach ($subjects as $key => $value) {
     // 題目 (判斷登入的會員才能使用投票功能)
     if(isset($_SESSION['user'])){
 
-        echo "<a class='d-inline-block col-md-8' href='index.php?do=vote&id={$value['id']}'>";
+        echo "<a class='d-inline-block col-md-8 ' href='index.php?do=vote&id={$value['id']}'>";
         echo $value['topic'];
         echo "</a>";
     }else{
@@ -23,8 +23,8 @@ foreach ($subjects as $key => $value) {
     echo "</span>";
     
     //看結果按鈕
-    echo "<a href='?do=vote_result&id={$value['id']}' class='d-inline-block col-md-2 text-center'>";
-    echo "<button class='btn-info'>觀看結果</button>";
+    echo "<a href='?do=vote_result&id={$value['id']}' class='d-inline-block col-md-2 text-center p-0'>";
+    echo "<button class='btn-info rounded'>觀看結果</button>";
     echo "</a>";
 
     echo "</li>";

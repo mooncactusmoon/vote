@@ -9,9 +9,9 @@
     <title>問卷系統</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>  
-      
         body{
             background-color: #f2f5f5;
+            font-family: Microsoft JhengHei;
         }
 
         header{
@@ -124,7 +124,7 @@
         <div class="row-cols-1 text-center d-flex flex-column">
     <?php
     if(isset($_SESSION['user'])){
-        echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+        echo "<span class='pr-5 '>{$_SESSION['user']}的工作列 : )</span>";
         echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
         ?>
             <!-- 放置功能 -->
