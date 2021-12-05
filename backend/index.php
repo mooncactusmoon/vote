@@ -89,7 +89,9 @@ if(!isset($_SESSION['user'])){
 <nav class="bg-light shadow-sm py-3 px-2 text-right my-0 d-flex justify-content-between">
 <div class="my-0">
         <!-- &nbsp; -->
-        <img src="../img/vote.jpg" alt="LOGO" width="50px" height="30px" >
+        <a href="../index.php">
+            <img src="../img/vote.jpg" alt="LOGO" width="50px" height="30px" >
+        </a>
         <a class="px-2" href="../index.php">回投票表列</a>
     </div>
     <!-- <div> -->
