@@ -124,7 +124,7 @@ if(isset($_SESSION['user'])){
     ?>
     
         <!-- 放置功能 -->
-        <a class="px-2" href="backend/index.php?do=show_vote_list">問卷管理</a>
+        <a class="px-2" href="backend/index.php?do=show_vote_list">投票管理</a>
         <a class="px-2" href="backend/index.php?do=member">會員管理</a>
         <a class="px-2" href="backend/index.php?do=ad">廣告管理</a>
     

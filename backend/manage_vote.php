@@ -1,4 +1,4 @@
-<h1>問卷管理
+<h1>投票管理
     <a href="?do=add_subject_form">
         <button class="btn btn-info rounded">新增問卷</button>
     </a>

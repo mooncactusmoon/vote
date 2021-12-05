@@ -92,7 +92,7 @@ if(!isset($_SESSION['user'])){
         <!-- <a class="px-2" href="?do=show_vote_list">問卷管理</a>
         <a class="px-2" href="?do=member">會員管理</a>
         <a class="px-2" href="?do=ad">廣告管理</a> -->
-        <a class="px-2" href="../index.php">回問卷表列</a>
+        <a class="px-2" href="../index.php">回投票表列</a>
     </div>
 <?php
 
@@ -131,7 +131,7 @@ if(isset($_SESSION['user'])){
     }
     ?>
         <!-- 放置功能 -->
-        <a class="px-2" href="?do=show_vote_list">問卷管理</a>
+        <a class="px-2" href="?do=show_vote_list">投票管理</a>
         <a class="px-2" href="?do=member">會員管理</a>
         <a class="px-2" href="?do=ad">廣告管理</a>
     </div>

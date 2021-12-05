@@ -1,4 +1,4 @@
-<h1>問卷表列</h1>
+<h1>投票題目表列</h1>
 <?php
 $subjects=all('topics');
 echo "<ol class='list-group'>";
