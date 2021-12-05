@@ -72,9 +72,9 @@
     <div>&nbsp;</div>
     <?php
 
-    if(isset($_SESSION['error'])){
-    echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
-    }
+    // if(isset($_SESSION['error'])){
+    // echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
+    // }
 
     if(isset($_SESSION['user'])){
     echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
