@@ -87,13 +87,17 @@ if(!isset($_SESSION['user'])){
 
 <!-- nav -->
 <nav class="bg-light shadow-sm py-3 px-2 text-right my-0 d-flex justify-content-between">
-    <div>
+<div class="my-0">
+        <!-- &nbsp; -->
+        <img src="../img/vote.jpg" alt="LOGO" width="50px" height="30px" >
+        <a class="px-2" href="../index.php">回投票表列</a>
+    </div>
+    <!-- <div> -->
         <!-- 放置功能 -->
         <!-- <a class="px-2" href="?do=show_vote_list">問卷管理</a>
         <a class="px-2" href="?do=member">會員管理</a>
-        <a class="px-2" href="?do=ad">廣告管理</a> -->
-        <a class="px-2" href="../index.php">回投票表列</a>
-    </div>
+        <a class="px-2" href="?do=ad">廣告管理</a> -->     
+    <!-- </div> -->
 <?php
 
 if(isset($_SESSION['error'])){
