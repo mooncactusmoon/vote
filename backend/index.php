@@ -128,26 +128,26 @@ if(isset($_SESSION['user'])){
 
 
 <!-- sidebar -->
-<aside class="container col-3 member ">
-<div class="row-cols-1 text-center d-flex flex-column">
-    <?php
-    if(isset($_SESSION['user'])){
-        echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
-        echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
-    }
-    ?>
-        <!-- 放置功能 -->
-        <a class="px-2" href="?do=show_vote_list">投票管理</a>
-        <a class="px-2" href="?do=member">會員管理</a>
-        <a class="px-2" href="?do=ad">廣告管理</a>
-    </div>
-</aside>
+    <aside class="container col-3 member ">
+    <div class="row-cols-1 text-center d-flex flex-column">
+        <?php
+        if(isset($_SESSION['user'])){
+            echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+            echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+        }
+        ?>
+            <!-- 放置功能 -->
+            <a class="px-2" href="?do=show_vote_list">投票管理</a>
+            <a class="px-2" href="?do=member">會員管理</a>
+            <a class="px-2" href="?do=ad">廣告管理</a>
+        </div>
+    </aside>
 <!-- sidebar end -->
 
 
 <!-- section -->
 
-<section class="container col-6">
+<section class="container col-7">
 
     <?php
     //判斷有沒有傳值，來決定顯現畫面
@@ -166,7 +166,7 @@ if(isset($_SESSION['user'])){
 
 
 <!-- ad bar -->
-<div class="container col-3 ad ">
+<div class="container col-2 ad ">
 AD
 </div>
 <!-- ad bar end -->
