@@ -1,4 +1,4 @@
-<!-- 需要修改讓有登入錯誤訊息在這裡不顯示 -->
+
 <h2 class="text-center">註冊</h2>
 <div class="container" style="height:508px">
 <form action="./api/reg.php" method="post" id="regForm" class="text-center">

@@ -108,7 +108,7 @@ if(isset($_SESSION['error'])){
 
 if(isset($_SESSION['user'])){
     echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
-    echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+    // echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
 }
 ?>
 </nav>
@@ -133,7 +133,7 @@ if(isset($_SESSION['user'])){
     <?php
     if(isset($_SESSION['user'])){
         echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
-        echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+        echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
     }
     ?>
         <!-- 放置功能 -->

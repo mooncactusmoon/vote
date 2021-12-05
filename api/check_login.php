@@ -12,7 +12,7 @@ if(rows('users',$_POST)>0){
 }else{
     $_SESSION['error']="帳號或密碼錯誤";
 
-    to("../index.php?do=login");
+    to("../index.php");
 }
 
 // session 先 to(header)要在後面
