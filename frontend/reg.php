@@ -1,5 +1,6 @@
 <!-- 需要修改讓有登入錯誤訊息在這裡不顯示 -->
 <h2 class="text-center">註冊</h2>
+<div class="container" style="height:508px">
 <form action="./api/reg.php" method="post" id="regForm" class="text-center">
     <table class="m-auto">
         <tr>
@@ -36,3 +37,8 @@
     </table>
     <div><input type="submit" value="確認送出"></div>
 </form>
+</div>
+<div class="container text-center mt-5">
+
+    <a  href="index.php">回到問卷表列</a>
+</div>

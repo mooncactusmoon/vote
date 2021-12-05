@@ -8,6 +8,9 @@ if(isset($_SESSION['error'])){
 ?>
 
 <h2 class="text-center">登入頁</h2>
+<div class="container" style="height:508px">
+
+
 <form action="./api/check_login.php" method="post" class="text-center">
     <table id="loginForm" class="m-auto">
         <tr>
@@ -26,6 +29,7 @@ if(isset($_SESSION['error'])){
         </tr>
     </table>
 </form>
+</div>
 <div class="container text-center mt-5">
 
     <a  href="index.php">回到問卷表列</a>
