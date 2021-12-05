@@ -1,4 +1,4 @@
-<h1>所有的問卷表單 
+<h1>問卷管理
     <a href="?do=add_subject_form">
         <button class="btn btn-info rounded">新增問卷</button>
     </a>

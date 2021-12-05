@@ -89,9 +89,10 @@ if(!isset($_SESSION['user'])){
 <nav class="bg-light shadow-sm py-3 px-2 text-right my-0 d-flex justify-content-between">
     <div>
         <!-- 放置功能 -->
-        <a class="px-2" href="?do=show_vote_list">問卷管理</a>
+        <!-- <a class="px-2" href="?do=show_vote_list">問卷管理</a>
         <a class="px-2" href="?do=member">會員管理</a>
-        <a class="px-2" href="?do=ad">廣告管理</a>
+        <a class="px-2" href="?do=ad">廣告管理</a> -->
+        <a class="px-2" href="../index.php">回問卷表列</a>
     </div>
 <?php
 
@@ -121,8 +122,19 @@ if(isset($_SESSION['user'])){
 
 
 <!-- sidebar -->
-<aside class="container col-3 member">
-HIHI
+<aside class="container col-3 member ">
+<div class="row-cols-1 text-center d-flex flex-column">
+    <?php
+    if(isset($_SESSION['user'])){
+        echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+        echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+    }
+    ?>
+        <!-- 放置功能 -->
+        <a class="px-2" href="?do=show_vote_list">問卷管理</a>
+        <a class="px-2" href="?do=member">會員管理</a>
+        <a class="px-2" href="?do=ad">廣告管理</a>
+    </div>
 </aside>
 <!-- sidebar end -->
 

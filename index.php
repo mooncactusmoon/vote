@@ -18,7 +18,7 @@
             height: 200px;
         }
         main{
-            height:620px;
+            height:624.5px;
             overflow: scroll;
         }
         main::-webkit-scrollbar {
@@ -114,8 +114,32 @@
 
 
 <!-- sidebar -->
-<aside class="container col-3 member">
-HIHI
+<aside class="container col-3 member ">
+    <div class="row-cols-1 text-center d-flex flex-column">
+<?php
+if(isset($_SESSION['user'])){
+    echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
+    echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+    
+    ?>
+    
+        <!-- 放置功能 -->
+        <a class="px-2" href="backend/index.php?do=show_vote_list">問卷管理</a>
+        <a class="px-2" href="backend/index.php?do=member">會員管理</a>
+        <a class="px-2" href="backend/index.php?do=ad">廣告管理</a>
+    
+    <?php
+}else{
+    ?>
+    <div class="">
+    <a href="?do=login" class="mr-2 btn-sm btn-warning">會員登入</a>
+    <a href="?do=reg" class=" btn-sm  btn-warning">註冊新會員</a>
+    </div>
+    <?php
+    }
+    ?>
+    </div>
+
 </aside>
 <!-- sidebar end -->
 
