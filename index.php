@@ -17,6 +17,13 @@
         header{
             height: 200px;
         }
+        main{
+            height:620px;
+            overflow: scroll;
+        }
+        main::-webkit-scrollbar {
+        display: none;
+        }
         .ad{
             background-color: #CCC;
         }
@@ -90,8 +97,9 @@
     ?>
     </nav>
 <!-- nav end -->
-<main class="d-flex row  container mx-auto">
+
 <!-- header -->
+
 <header class="container bg-warning">
     <div class="row">
 
@@ -100,10 +108,8 @@
 </header>
 <!-- header end -->
 
-
-
-
 <!-- main 包含了 aside(sidebar) section -->
+<main class="d-flex row px-0 container mx-auto">
 
 
 
