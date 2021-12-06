@@ -24,6 +24,7 @@ if(!isset($_SESSION['user'])){
 
       header{
           height: 200px;
+          overflow: hidden;
       }
       section{
             height:620px;
@@ -118,8 +119,7 @@ if(isset($_SESSION['user'])){
 <!-- header -->
 <header class="container bg-warning">
     <div class="row">
-        
-        I am Header
+        <img  src="../img/vote-header.jpg" alt="標題圖">
     </div>
 </header>
 <!-- header end -->

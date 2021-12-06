@@ -16,6 +16,7 @@
 
         header{
             height: 200px;
+            overflow: hidden;
         }
         section{
             height:624.5px;
@@ -110,8 +111,7 @@
 
 <header class="container bg-warning">
     <div class="row">
-
-        I am Header
+    <img src="./img/vote-header.jpg" alt="標題圖" >
     </div>
 </header>
 <!-- header end -->
