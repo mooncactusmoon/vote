@@ -29,10 +29,22 @@
             background-color: #CCC;
         }
         .member{
-            background-color:#0b1f5c;
-            color: #475FA8;
-            font-size: 20px;
+            text-align: center;
+          background-color:#0b1f5c;
+          color: #abdeeb;
+          font-size: 20px;
         }
+        .a{
+          color:#cab9fa;
+          height: 40px;
+      }
+      .a:hover{
+          background : #82b3e0;
+          color: #2d02a3;
+          text-decoration: none;
+          font-weight:900;
+
+      }
 
         footer{
             position: fixed;
@@ -121,16 +133,19 @@
 
 <!-- sidebar -->
     <aside class="container col-3 member ">
-        <div class="row-cols-1 text-center d-flex flex-column">
+        <div class="row-cols-1 d-flex flex-column">
     <?php
     if(isset($_SESSION['user'])){
-        echo "<span class='pr-5 '>{$_SESSION['user']}的工作列 : )</span>";
-        echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+        echo "<span class='pr-5 mt-3'>{$_SESSION['user']}的工作列 : )</span>";
+        
         ?>
             <!-- 放置功能 -->
-            <a class="px-2" href="backend/index.php?do=show_vote_list">投票管理</a>
-            <a class="px-2" href="backend/index.php?do=member">會員管理</a>
-            <a class="px-2" href="backend/index.php?do=ad">廣告管理</a>
+            <a class="px-2 mt-3 a" href="backend/index.php?do=show_vote_list">投票管理</a>
+            <a class="px-2 mt-3 a" href="backend/index.php?do=member">會員管理</a>
+            <a class="px-2 mt-3 a" href="backend/index.php?do=ad">廣告管理</a>
+            <?php
+            echo "<a href='logout.php' class='btn-sm mt-5 btn-warning'>登出</a>";
+            ?>
 
         <?php
     }else{

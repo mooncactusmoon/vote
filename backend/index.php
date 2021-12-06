@@ -26,6 +26,9 @@ if(!isset($_SESSION['user'])){
           height: 200px;
           overflow: hidden;
       }
+      .img{       
+        filter:contrast(50%);
+      }
       section{
             height:620px;
             overflow: scroll;
@@ -37,9 +40,22 @@ if(!isset($_SESSION['user'])){
           background-color: #CCC;
       }
       .member{
+          text-align: center;
           background-color:#0b1f5c;
-          color: #475FA8;
+          color: #abdeeb;
           font-size: 20px;
+      }
+      
+      .a{
+          color:#cab9fa;
+          height: 40px;
+      }
+      .a:hover{
+          background : #82b3e0;
+          color: #2d02a3;
+          text-decoration: none;
+          font-weight:900;
+
       }
 
       footer{
@@ -119,7 +135,7 @@ if(isset($_SESSION['user'])){
 <!-- header -->
 <header class="container bg-warning">
     <div class="row">
-        <img  src="../img/vote-header.jpg" alt="標題圖">
+        <img class="img" src="../img/vote-header.jpg" alt="標題圖" >
     </div>
 </header>
 <!-- header end -->
@@ -130,17 +146,20 @@ if(isset($_SESSION['user'])){
 
 <!-- sidebar -->
     <aside class="container col-3 member ">
-    <div class="row-cols-1 text-center d-flex flex-column">
+    <div class="row-cols-1  d-flex flex-column">
         <?php
         if(isset($_SESSION['user'])){
-            echo "<span class='pr-5 '>{$_SESSION['user']}的工作列 : )</span>";
-            echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+            echo "<span class='pr-5 mt-3 '>{$_SESSION['user']}的工作列 : )</span>";
+            
         }
         ?>
             <!-- 放置功能 -->
-            <a class="px-2" href="?do=show_vote_list">投票管理</a>
-            <a class="px-2" href="?do=member">會員管理</a>
-            <a class="px-2" href="?do=ad">廣告管理</a>
+            <a class="px-2 mt-3 a" href="?do=show_vote_list">投票管理</a>
+            <a class="px-2 mt-3 a" href="?do=member">會員管理</a>
+            <a class="px-2 mt-3 a" href="?do=ad">廣告管理</a>
+            <?php
+            echo "<a href='../logout.php' class='btn-sm btn-warning mt-5'>登出</a>";
+            ?>
         </div>
     </aside>
 <!-- sidebar end -->
