@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>問卷系統</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>  
         body{
@@ -105,8 +106,8 @@
     // }
 
     if(isset($_SESSION['user'])){
-    echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
-    // echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+    echo "<span class='pr-5 '>{$_SESSION['user']}歡迎，點選問卷即可加入投票唷 : )</span>";
+    echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
     }else{
     ?>
     <!-- <div class="">
@@ -143,8 +144,9 @@
             <a class="px-2 mt-3 a" href="backend/index.php?do=show_vote_list">投票管理</a>
             <a class="px-2 mt-3 a" href="backend/index.php?do=member">會員管理</a>
             <a class="px-2 mt-3 a" href="backend/index.php?do=ad">廣告管理</a>
+            
             <?php
-            echo "<a href='logout.php' class='btn-sm mt-5 btn-warning'>登出</a>";
+            // echo "<a href='logout.php' class='btn-sm mt-5 btn-warning'>登出</a>";
             ?>
 
         <?php
@@ -156,8 +158,8 @@
                 <p>會員登入</p>
                 <input class="mt-3" type="text" name="account" placeholder="請輸入帳號" >
                 <input class="mt-3" type="password" name="password" placeholder="請輸入密碼">
-                <input class="mt-3 btn btn-info rounded" type="submit" value="登入">
                 <input class="mt-3 btn btn-info rounded" type="reset" value="重新輸入">
+                <input class="mt-3 btn btn-info rounded" type="submit" value="登入">
             </div>
             </form>
         </div>

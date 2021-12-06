@@ -14,6 +14,7 @@ if(!isset($_SESSION['user'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>問卷系統</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>  
       
@@ -125,8 +126,8 @@ if(isset($_SESSION['error'])){
 }
 
 if(isset($_SESSION['user'])){
-    echo "<span class='pr-5 '>歡迎，{$_SESSION['user']} : )</span>";
-    // echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+    echo "<span class='pr-5 '>{$_SESSION['user']}您好，這裡是後臺編輯區</span>";
+    echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
 }
 ?>
 </nav>
@@ -158,7 +159,7 @@ if(isset($_SESSION['user'])){
             <a class="px-2 mt-3 a" href="?do=member">會員管理</a>
             <a class="px-2 mt-3 a" href="?do=ad">廣告管理</a>
             <?php
-            echo "<a href='../logout.php' class='btn-sm btn-warning mt-5'>登出</a>";
+            // echo "<a href='../logout.php' class='btn-sm btn-warning mt-5'>登出</a>";
             ?>
         </div>
     </aside>
