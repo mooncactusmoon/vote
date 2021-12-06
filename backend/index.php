@@ -91,7 +91,7 @@ if(!isset($_SESSION['user'])){
 <div class="my-0">
         <!-- &nbsp; -->
         <a href="../index.php">
-            <img src="../img/vote.jpg" alt="LOGO" width="50px" height="30px" >
+            <img src="../img/vote.png" alt="LOGO" width="80px" height="35px" >
         </a>
         <a class="px-2" href="../index.php">回投票表列</a>
     </div>
