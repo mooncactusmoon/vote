@@ -1,4 +1,4 @@
-<!-- 會員管理 尚未完成-->
+<!-- 會員管理 完成-->
 <?php
     if(isset($_SESSION['ok'])){
         echo "<script>alert('會員資料已成功更新:>')</script>";

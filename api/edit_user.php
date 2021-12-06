@@ -1,4 +1,4 @@
-<!-- 未完成 -->
+<!-- 完成 -->
 
 <?php include_once "db.php";
 
