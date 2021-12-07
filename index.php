@@ -110,7 +110,7 @@
     // }
 
     if(isset($_SESSION['user'])){
-    echo "<span class='pr-5 my-auto'>{$_SESSION['user']}歡迎，點選問卷即可加入投票唷 : )</span>";
+    echo "<span class='pr-5 my-auto'>{$_SESSION['name']}歡迎，點選問卷即可加入投票唷 : )</span>";
     echo "<a href='logout.php' class='btn-sm btn-warning my-auto'>登出</a>";
     }
     ?>
@@ -136,7 +136,7 @@
         <div class="row-cols-1 d-flex flex-column">
     <?php
     if(isset($_SESSION['user'])){
-        echo "<span class='pr-5 mt-3'>{$_SESSION['user']}的工作列 : )</span>";
+        echo "<span class='pr-5 mt-3'>{$_SESSION['name']}的工作列 : )</span>";
         
         ?>
             <!-- 放置功能 -->
