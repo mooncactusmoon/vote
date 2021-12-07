@@ -142,9 +142,13 @@
             <!-- 放置功能 -->
             <a class="px-2 mt-3 a" href="backend/index.php?do=show_vote_list">投票管理</a>
             <a class="px-2 mt-3 a" href="backend/index.php?do=member">會員管理</a>
+            <?php
+            if($_SESSION['id']==1){    
+            ?>
             <a class="px-2 mt-3 a" href="backend/index.php?do=ad">廣告管理</a>
             
             <?php
+            }
             // echo "<a href='logout.php' class='btn-sm mt-5 btn-warning'>登出</a>";
             ?>
 
