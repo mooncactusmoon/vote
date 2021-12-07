@@ -89,11 +89,11 @@
 <!-- 輪播 end -->
 
 <!-- nav -->
-    <nav class="container-fluid bg-light shadow-sm py-3 px-2 text-right  d-flex justify-content-between my-0">
+    <nav class="container-fluid bg-light shadow-sm py-2 px-2 text-right  d-flex justify-content-between my-0">
     <div class="my-0">
         <!-- &nbsp; -->
         <a href="index.php">
-            <img src="./img/vote.png" alt="LOGO" width="80px" height="35px" >
+            <img src="./img/logo1.png" alt="LOGO" width="55px" height="40px" >
         </a>
     </div>
     <?php
@@ -110,8 +110,8 @@
     // }
 
     if(isset($_SESSION['user'])){
-    echo "<span class='pr-5 '>{$_SESSION['user']}歡迎，點選問卷即可加入投票唷 : )</span>";
-    echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
+    echo "<span class='pr-5 my-auto'>{$_SESSION['user']}歡迎，點選問卷即可加入投票唷 : )</span>";
+    echo "<a href='logout.php' class='btn-sm btn-warning my-auto'>登出</a>";
     }
     ?>
     </nav>

@@ -31,7 +31,7 @@ if(!isset($_SESSION['user'])){
         filter:contrast(50%);
       }
       section{
-            height:620px;
+            height:625px;
             overflow: scroll;
         }
       section::-webkit-scrollbar {
@@ -105,11 +105,11 @@ if(!isset($_SESSION['user'])){
 <!-- 輪播 end -->
 
 <!-- nav -->
-<nav class="bg-light shadow-sm py-3 px-2 text-right my-0 d-flex justify-content-between">
+<nav class="bg-light shadow-sm py-2 px-2 text-right my-0 d-flex justify-content-between">
 <div class="my-0">
         <!-- &nbsp; -->
         <a href="../index.php">
-            <img src="../img/vote.png" alt="LOGO" width="80px" height="35px" >
+        <img src="../img/logo1.png" alt="LOGO" width="55px" height="40px" >
         </a>
         <a class="px-2" href="../index.php">回投票表列</a>
     </div>
@@ -126,8 +126,8 @@ if(isset($_SESSION['error'])){
 }
 
 if(isset($_SESSION['user'])){
-    echo "<span class='pr-5 '>{$_SESSION['user']}您好，這裡是後臺編輯區</span>";
-    echo "<a href='../logout.php' class='btn-sm btn-warning'>登出</a>";
+    echo "<span class='pr-5 my-auto'>{$_SESSION['user']}您好，這裡是後臺編輯區</span>";
+    echo "<a href='../logout.php' class='btn-sm btn-warning my-auto'>登出</a>";
 }
 ?>
 </nav>
