@@ -11,7 +11,7 @@
             <?php
             if($_SESSION['id']==1){    
             ?>
-            <a class="px-2 mt-3 a" href="./backend/index.php?do=ad">廣告管理</a>
+            <a class="px-2 mt-3 a" href="./backend/index.php?do=adImg">廣告管理</a>
             
             <?php
             }
