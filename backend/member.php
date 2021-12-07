@@ -39,7 +39,7 @@ $user=$pdo->query($sql)->fetch();
     <legend class="col-form-label col-sm-4 text-center" ><i class="fas fa-mars-stroke">&nbsp;&nbsp;性別</i></legend>
         <div class="col-sm-8">
             <div class="form-check-inline mr-5">  
-                <input class="form-check-input " type="radio" name="gender" id="man" value="man">
+                <input class="form-check-input " type="radio" name="gender" id="man" value="man" checked>
                 <label class="form-check-label" for="man">男生</label>
             </div>
             <div class="form-check-inline mr-5">
