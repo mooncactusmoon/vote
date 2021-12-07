@@ -97,6 +97,10 @@
         </a>
     </div>
     <?php
+    if(isset($_SESSION['success'])){
+        echo "<span class='pr-5 mx-auto text-info  font-weight-bold'>{$_SESSION['success']}</span>";
+        unset($_SESSION['success']);
+    }
     if(isset($_SESSION['error'])){
         echo "<script>alert('帳號或密碼錯誤，請再試一次')</script>";
         unset($_SESSION['error']);
@@ -108,13 +112,6 @@
     if(isset($_SESSION['user'])){
     echo "<span class='pr-5 '>{$_SESSION['user']}歡迎，點選問卷即可加入投票唷 : )</span>";
     echo "<a href='logout.php' class='btn-sm btn-warning'>登出</a>";
-    }else{
-    ?>
-    <!-- <div class="">
-    <a href="?do=login" class="mr-2 btn-sm btn-warning">會員登入</a>
-    <a href="?do=reg" class=" btn-sm  btn-warning">註冊新會員</a>
-    </div> -->
-    <?php
     }
     ?>
     </nav>
@@ -124,7 +121,9 @@
 
 <header class="container bg-warning">
     <div class="row">
+    <a  href="index.php">
     <img src="./img/vote-header.jpg" alt="標題圖" >
+    </a>
     </div>
 </header>
 <!-- header end -->
@@ -156,8 +155,8 @@
             <form action="./api/check_login.php" method="post" class="text-center">
             <div class="m-auto">
                 <p>會員登入</p>
-                <input class="mt-3" type="text" name="account" placeholder="請輸入帳號" >
-                <input class="mt-3" type="password" name="password" placeholder="請輸入密碼">
+                <input class="mt-3 form-control" type="text" name="account" placeholder="請輸入帳號" >
+                <input class="mt-3 form-control" type="password" name="password" placeholder="請輸入密碼">
                 <input class="mt-3 btn btn-info rounded" type="reset" value="重新輸入">
                 <input class="mt-3 btn btn-info rounded" type="submit" value="登入">
             </div>

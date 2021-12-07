@@ -136,7 +136,9 @@ if(isset($_SESSION['user'])){
 <!-- header -->
 <header class="container bg-warning">
     <div class="row">
+    <a  href="index.php">
         <img class="img" src="../img/vote-header.jpg" alt="標題圖" >
+    </a>
     </div>
 </header>
 <!-- header end -->

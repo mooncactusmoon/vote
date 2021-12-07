@@ -8,7 +8,7 @@
         <label for="account" class="col-sm-4 col-form-label text-center "><i
         class="fas fa-file-signature">&nbsp;&nbsp;帳號</i></label>
         <div class=" col-sm-8 ">
-            <input type="text" class="form-control border-info" id="account" name="account">
+            <input type="text" class="form-control border-info" id="account" name="account" required>
         </div>
     </div>
     
@@ -16,25 +16,25 @@
         <label for="password" class="col-sm-4 col-form-label text-center "><i
                 class="fas fa-mobile-alt">&nbsp;&nbsp;密碼</i></label>
         <div class=" col-sm-8 ">
-            <input type="text" class="form-control border-info" id="password" name="password">
+            <input type="password" class="form-control border-info" id="password" name="password" required>
         </div>
     </div>
     <div class="form-group row mt-4">
         <label for="email" class="col-sm-4 col-form-label text-center"><i class="fas fa-at ">&nbsp;&nbsp;信箱</i></label>
-        <input type="email" class="form-control col-sm-8 text-center border-info" id="email" name="email" placeholder="name@example.com">
+        <input type="email" class="form-control col-sm-8 text-center border-info" id="email" name="email" placeholder="name@example.com" required>
     </div>
     <div class="form-group row mt-4">
         <label for="name" class="col-sm-4 col-form-label text-center">
             <i class="fas fa-user-tie">&nbsp;&nbsp;姓名</i></label>
         <div class=" col-sm-8 ">
-            <input type="text" class="form-control border-info" id="name" name="name">
+            <input type="text" class="form-control border-info" id="name" name="name" required>
         </div>
     </div>
     <div class="form-group row mt-4">
         <legend class="col-form-label col-sm-4 text-center"><i class="fas fa-mars-stroke">&nbsp;&nbsp;性別</i></legend>
             <div class="col-sm-8">
                 <div class="form-check-inline mr-5">  
-                    <input class="form-check-input " type="radio" name="gender" id="man" value="man">
+                    <input class="form-check-input " type="radio" name="gender" id="man" value="man" checked>
                     <label class="form-check-label" for="man">男生</label>
                 </div>
                 <div class="form-check-inline mr-5">
@@ -51,13 +51,9 @@
         <label for="birthday" class="col-sm-4 col-form-label text-center">
             <i class="fas fa-birthday-cake">&nbsp;&nbsp;生日</i></label>
         <div class="col-sm-8">
-            <input type="date" class="date" id="birthday" name="birthday" >
+            <input type="date" class="date" id="birthday" name="birthday" required>
         </div>
     </div>
-    <div><input type="submit" class="btn btn-info mt-5" value="確認送出"></div>
+    <div><input type="submit" class="btn btn-info my-5" value="確認送出"></div>
 </form>
-
-<div class="container text-center mt-5">
-    <a  href="index.php">回到問卷表列</a>
-</div>
 </div>
