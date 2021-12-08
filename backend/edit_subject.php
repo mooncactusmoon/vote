@@ -14,6 +14,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
         <button class="bg-warning rounded" style="font-size:18px;" type="button">+</button>
     </a>
 
+
     <?php
     foreach($options as $key => $opt){
 
@@ -35,5 +36,18 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     //     }
     // }
     ?>
+
+<!-- 嘗試用JS動態新增選項欄位 -->
+<button class="bg-warning rounded" style="font-size:18px;" type="button" onclick="add_opt();">+</button>
+    <div id="div" class="container">
+
+        <input id="opt_t" type='text' name='options[]' value="">
+        <input id="opt_h" type='hidden' name='opt_id[]' value="{$opt['id']}">
+    </div>
+    <!-- 連接資料庫? 防止一樣的選項? -->
+    
+<!-- 嘗試用JS動態新增選項欄位 end -->
+
 <input type="submit" value="送出" class="btn btn-primary mt-3 ">
 </form>
+
