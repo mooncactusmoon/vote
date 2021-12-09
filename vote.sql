@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-12-04 17:38:11
+-- 產生時間： 2021-12-09 16:11:10
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 7.4.23
 
@@ -73,7 +73,7 @@ INSERT INTO `options` (`id`, `opt`, `count`, `topic_id`) VALUES
 (27, '嘟嘟', 0, 6),
 (28, 'A', 0, 7),
 (29, 'B', 0, 7),
-(30, 'C', 0, 7),
+(30, 'CC', 0, 7),
 (31, '11', 0, 8),
 (32, '22', 0, 8),
 (33, '33', 0, 8),
@@ -81,7 +81,18 @@ INSERT INTO `options` (`id`, `opt`, `count`, `topic_id`) VALUES
 (35, '000B', 0, 9),
 (36, '000C', 0, 9),
 (37, '000D', 0, 9),
-(38, '000E', 0, 9);
+(38, '000E', 0, 9),
+(39, '貓', 0, 10),
+(40, '狗', 0, 10),
+(41, '鳥', 0, 10),
+(42, '快樂', 0, 12),
+(43, '普通', 0, 12),
+(44, '不快樂', 0, 12),
+(45, '不知道', 0, 12),
+(46, '', 0, 10),
+(47, '', 0, 3),
+(48, '456666', 0, 13),
+(49, '789999', 0, 13);
 
 -- --------------------------------------------------------
 
@@ -104,7 +115,11 @@ INSERT INTO `topics` (`id`, `topic`) VALUES
 (6, '測試問卷2'),
 (7, '1203test'),
 (8, 'test22'),
-(9, '0000');
+(9, '0000'),
+(10, '最喜歡的動物'),
+(11, '喜歡的飲料'),
+(12, '你快樂嗎'),
+(13, 'OAO');
 
 -- --------------------------------------------------------
 
@@ -119,18 +134,20 @@ CREATE TABLE `users` (
   `email` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL COMMENT '信箱',
   `name` varchar(12) COLLATE utf8mb4_unicode_520_ci NOT NULL COMMENT '姓名',
   `gender` varchar(16) COLLATE utf8mb4_unicode_520_ci NOT NULL COMMENT '性別',
-  `birthday` date NOT NULL COMMENT '生日'
+  `birthday` date NOT NULL COMMENT '生日',
+  `note` varchar(11) COLLATE utf8mb4_unicode_520_ci NOT NULL COMMENT '備註'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- 傾印資料表的資料 `users`
 --
 
-INSERT INTO `users` (`id`, `account`, `password`, `email`, `name`, `gender`, `birthday`) VALUES
-(1, 'moon', '1234', 'moon@gmail', 'MoonLin', 'woman', '2021-11-02'),
-(2, 'test1234', 'test1234', 'test@gmail', '測試一號', 'man', '2021-12-04'),
-(3, 'test2222', 'test2222', 'test22@gmail', '測試二號', 'woman', '2021-11-13'),
-(4, 'test3333', 'test3333', 'test3@gmail', '測試三號', 'third_gender', '2021-08-04');
+INSERT INTO `users` (`id`, `account`, `password`, `email`, `name`, `gender`, `birthday`, `note`) VALUES
+(1, 'moon', '1234', 'moon@gmail', 'MoonLin', 'woman', '2021-11-02', '管理者'),
+(2, 'test1234', 'test1234', 'test@gmail', '測試一號', 'man', '2021-12-04', ''),
+(3, 'test2222', 'test2222', 'test22@gmail', '測試二號', 'woman', '2021-11-13', ''),
+(4, 'test3333', 'test3333', 'test3@gmail', '測試三號', 'third_gender', '2021-08-04', ''),
+(5, '20211206', '20211206', '1206@gmail', '1206測試員YOYO', 'man', '2020-12-06', '');
 
 --
 -- 已傾印資料表的索引
@@ -174,19 +191,19 @@ ALTER TABLE `ad`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
