@@ -1,26 +1,34 @@
 <!-- 廣告管理 -->
-<h2 class="text-center mt-3 font-weight-bold">輪播圖片管理</h2>
+<?php
+    if(isset($_SESSION['upload_ok'])){
+        echo "<script>alert('{$_SESSION['upload_ok']}')</script>";
+        unset($_SESSION['upload_ok']);
+    }
+?>
+<h2 class="text-center mt-3 font-weight-bold">廣告圖片管理</h2>
 
 <div class="row ">
-    <div class="col-md-3">
-        <form action="../api/upload_ad.php" method="post" enctype="multipart/form-data">
-            
-            <div class="custom-file d-block m-auto ">
-                <label for="upload" class=" custom-file-label ">選擇檔案</label>
-                <input type="file" name="name" id="upload" class=" custom-file-input " >
-            </div>
-            <div class="text-center input-group m-auto">
-                <label for="intro" class="input-group-prpend input-group-text">說明</label>
-                <input type="text" name="intro" id="intro" class="form-control">
-            </div>
-            <div class="text-center mt-3 m-auto">
-                <input type="submit" value="上傳" class="btn btn-info">
-            </div>    
-            
-        </form>
+    <div class="col-md-3 input-group">
+        <div class="row">
+            <form action="../api/upload_ad.php" method="post" enctype="multipart/form-data" >        
+                <div class="custom-file d-block m-auto row">
+                    <label for="upload" class="custom-file-label row">選擇檔案</label>
+                    <input type="file" name="name" id="upload" class="row custom-file-input " >
+                </div>
+                <div class="text-center input-group m-auto row">    
+                    <input type="text" name="intro" id="intro" class="form-control" placeholder="輸入說明" required>
+                </div>
+                <div class="text-center mt-3 m-auto">
+                    <input type="submit" value="上傳" class="btn btn-info">
+                </div>    
+                
+            </form>
+        </div>
+
     </div>
     <div class="col-md-9">
-        <h3 class="text-center">圖片列表</h3>
+        <h3 class="text-center my-3">圖片列表</h3>
+        <p class="text-center text-danger">建議廣告擺放不超過三張</p>
         <table class="table">
             <tr>
                 <td>圖片</td>
@@ -47,7 +55,6 @@
 
             echo "<td>";
             echo "<a class='btn btn-info' href='?do=edit_ad&id={$row['id']}'>修改</a>";
-            echo "<button>重新上傳</button>";
             echo "<a class='btn btn-danger' href='../api/del_ad.php?id={$row['id']}'>刪除</a>";
             echo "</td>";
 

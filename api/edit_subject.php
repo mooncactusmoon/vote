@@ -12,8 +12,6 @@ update('topics',['topic'=>$topic],['id'=>$topic_id]);
 $options=$_POST['options'];
 $opt_id=$_POST['opt_id'];
 
-echo json_encode($options);
-echo json_encode($opt_id); //新添加的選項不會有opt_id
 
 foreach($options as $key => $opt){
     //晴天 as 0 => 晴天
@@ -29,10 +27,6 @@ foreach($options as $key => $opt){
     }else if($opt){//剩下就是有opt但是沒有opt_id的新選項
         $arr=['opt'=>$opt,'topic_id'=> $topic_id ];
            //['opt'=>颱風,'topic_id=> $topic_id ]
-
-        //echo json_encode($arr);
-        //echo json_encode(['opt'=>$opt,'topic_id'=>$topic_id['id']]);
-        //echo json_encode([$key => $opt]);
         
         insert('options',$arr);
 

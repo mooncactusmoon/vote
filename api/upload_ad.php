@@ -1,3 +1,5 @@
+<!-- 上傳廣告圖片 -->
+
 <?php include_once "db.php";
 
 if(!empty($_FILES['name']['tmp_name'])){
@@ -8,5 +10,7 @@ if(!empty($_FILES['name']['tmp_name'])){
 
     insert('ad',['name'=>$filename,'sh'=>0,'intro'=>$intro]);
 }
-to("../backend/?do=ad");
+$_SESSION['upload_ok']="圖片已經上傳成功";
+
+to("../backend/?do=adImg");
 ?>

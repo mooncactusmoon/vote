@@ -1,3 +1,4 @@
+<!-- 修改廣告圖 -->
 <?php include_once "db.php";
 $ad=find("ad",$_POST['id']);
 
@@ -17,5 +18,5 @@ if(isset($filename)){
 
 }
 
-to("../backend/?do=ad");
+to("../backend/?do=adImg");
 ?>

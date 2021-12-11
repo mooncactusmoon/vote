@@ -19,6 +19,7 @@ foreach($options as $key => $opt){
     $arr=['opt'=>$opt,'topic_id'=> $topic_id ];
     insert('options',$arr);
 }
+//  判斷 問卷題目有無和資料庫重複 / 選項之間是否重複
 
 //新增完之後回首頁
 to("../backend/index.php");

@@ -194,8 +194,18 @@ if(isset($_SESSION['user'])){
 
 
 <!-- ad bar -->
-<div class="container col-2 ad ">
-AD
+<div class="container col-2 ad ">    
+    <?php
+    $images=all('ad',['sh'=>1]);
+    foreach($images as $key => $image){
+        if($key==0){
+            echo "<div class='rounded my-1'>";
+        }else{
+            echo "<div class='rounded my-1'>";
+        }
+        echo "<img src='../img/{$image['name']}' alt='{$image['intro']}' class='d-block w-100'></div>";
+    }
+    ?>                  
 </div>
 <!-- ad bar end -->
 

@@ -157,7 +157,7 @@
 
 <!-- ad bar -->
 <div class="container col-2 ad ">
-AD
+<?php include "./frontend/adImg.php";?>
 </div>
 <!-- ad bar end -->
 
