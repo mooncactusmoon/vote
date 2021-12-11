@@ -2,8 +2,12 @@
 <!-- 讓題目增加選項框 -->
 <?php
 
-$id=$_GET['id'];
-insert('options',['opt'=>"",'topic_id'=>$id]);
 
-to("../backend/?do=edit_subject&id=$id");
+foreach($options as $key => $opt){
+    $arr=['opt'=>$opt,'topic_id'=> $id ];
+    insert('options',$arr);
+}
+
+
+// to("../backend/?do=edit_subject&id=$id");
 ?>

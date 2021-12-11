@@ -10,9 +10,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     <input type="hidden" name="topic_id" value="<?=$subject['id'];?>">
     <!-- button標籤預設是submit,所以如果不要跳轉畫面要給他type="button"//input:button -->
     <!-- 增加選項(使用後端的方式，注意!按鈕選下去就會轉畫面，尚未submit的編輯選項就會不見) -->
-    <a href="../api/add_option.php?id=<?=$subject['id'];?>">
-        <button class="bg-warning rounded" style="font-size:18px;" type="button">+</button>
-    </a>
+
 
 
     <?php
@@ -38,11 +36,11 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     ?>
 
 <!-- 嘗試用JS動態新增選項欄位 -->
-<button class="bg-warning rounded" style="font-size:18px;" type="button" onclick="add_opt();">+</button>
+<button class="btn btn-outline-primary rounded mt-4" style="font-size:10px;" type="button" onclick="add_opt();">+</button>
     <div id="div" class="container">
 
         <input id="opt_t" type='text' name='options[]' value="">
-        <input id="opt_h" type='hidden' name='opt_id[]' value="{$opt['id']}">
+        <input id="opt_h" type='hidden' name='opt_id[]' value="">
     </div>
     <!-- 連接資料庫? 防止一樣的選項? -->
     

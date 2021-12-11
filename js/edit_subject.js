@@ -8,9 +8,9 @@ function add_opt(){
     //限制input個數 ?
 
     let but=document.createElement('button');
-    but.style="font-size:18px";
-    but.className="bg-warning rounded";
-    but.innerHTML="-";
+    but.style="font-size:5px";
+    but.className="btn btn-danger btn-outline-light rounded ";
+    but.innerHTML=" - ";
     but.type='button';
     but.name='lol'; 
     but.onclick = function(){
