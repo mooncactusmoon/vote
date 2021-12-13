@@ -20,6 +20,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
         echo "選項 " . ($key+1) . " : ";
         echo "<input type='text' name='options[]' value='{$opt['opt']}'>";
         echo "<input type='hidden' name='opt_id[]' value='{$opt['id']}'>";
+        echo "<a class='btn btn-danger' href='#'>刪除</a>";
         echo "</label>";
     }
 
