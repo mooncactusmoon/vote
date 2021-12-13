@@ -38,6 +38,7 @@ foreach($options as $key => $opt){
     //     insert('options',['opt'=>$opt,'topic_id'=>$topic_id]);
     // }
 }
+$_SESSION['ok']="投票問卷已更新";
 
-to("../backend/index.php");
+to("../backend/?do=edit_subject&&id=$topic_id");
 ?>
