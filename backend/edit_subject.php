@@ -21,10 +21,10 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 
     <?php
     foreach($options as $key => $opt){
-
+        //a href='../api/del_opt.php?id={$opt['id']}'
         echo "<label class='list-group-item'>";
         echo "選項 " . ($key+1) . " : ";
-        echo "<a href='../api/del_opt.php?id={$opt['id']}' class='btn btn-danger' >刪除</a>";
+        echo "<button name='delete' type='button' class='btn btn-danger' >刪除</button>";
         echo "<input type='text' name='options[]' value='{$opt['opt']}'>";
         echo "<input type='hidden' name='opt_id[]' value='{$opt['id']}'>";
         echo "</label>";
@@ -57,15 +57,23 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 </form>
 
 
-<!-- onclick='javascript:return del();'
+
 <script>
-    function del() {
-var msg = "您真的確定要刪除嗎？\n\n請確認！";
-if (confirm(msg)==true){
-return true;
-}else{
-return false;
-}
-}
-</script> -->
+    
+var elements = document.getElementsByName("delete");  
+    for(var i=0 ; i<elements.length ; i++){
+        elements[i].addEventListener('click', function(e){
+            let middle = this.nextElementSibling;
+            let last = middle.nextElementSibling;
+            let msg = "您真的確定要刪除 (" + middle.value + ") 嗎" + "\n\n請確認！";
+            if (confirm(msg)==true){
+                window.location = '../api/del_opt.php?id=' + last.value ;
+               
+            }else{
+                return false;
+            }
+
+        }, false);
+    }
+</script>
 

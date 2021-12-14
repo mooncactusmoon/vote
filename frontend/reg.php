@@ -8,7 +8,7 @@
         <label for="account" class="col-sm-4 col-form-label text-center "><i
         class="fas fa-file-signature">&nbsp;&nbsp;帳號</i></label>
         <div class=" col-sm-8 ">
-            <input type="text" class="form-control border-info" id="account" name="account" required>
+            <input type="text" class="form-control border-info" id="account" name="account" placeholder="請輸入至少8個字元" pattern="[a-zA-Z0-9]{8,}" required>
         </div>
     </div>
     
@@ -16,7 +16,7 @@
         <label for="password" class="col-sm-4 col-form-label text-center "><i
                 class="fas fa-mobile-alt">&nbsp;&nbsp;密碼</i></label>
         <div class=" col-sm-8 ">
-            <input type="password" class="form-control border-info" id="password" name="password" required>
+            <input type="password" class="form-control border-info" id="password" name="password" placeholder="請輸入至少8個字元" pattern="[a-zA-Z0-9]{8,}" required>
         </div>
     </div>
     <div class="form-group row mt-4">

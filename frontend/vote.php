@@ -12,16 +12,18 @@ $poll=all('polls',['topic_id'=>$id]);
 
     <?php
     // 判斷是否投過票
-    echo "<pre>";
-    print_r($poll);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($poll);
+    // echo "</pre>";
     $t=rows('polls',['topic_id'=>$id]);
-    echo "<br>";
+    // echo "<br>";
     for($i=0;$i<$t;$i++){
         if($poll[$i]['user_id']==$_SESSION['id'] && $poll[$i]['topic_id']==$subject['id']){
-            echo "您已投過票了^ _ ^";
+           echo "<script>alert('您已經投過了唷');</script>";
+           echo "<script>window.location.href='index.php';</script>";
         }
     }
+    
             foreach ($options as $key => $opt){
                 if($opt['opt']!=""){
         

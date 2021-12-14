@@ -32,7 +32,7 @@
             </div>
             </form>
         </div>
-        <a href="../index.php?do=reg" class="mt-5 btn-sm  btn-light rounded">註冊新會員</a>
+        <a href="./index.php?do=reg" class="mt-5 btn-sm  btn-light rounded">註冊新會員</a>
         </div>
         <?php
         }
