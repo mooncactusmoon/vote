@@ -18,9 +18,9 @@ $poll=all('polls',['topic_id'=>$id]);
     $t=rows('polls',['topic_id'=>$id]);
     echo "<br>";
     for($i=0;$i<$t;$i++){
-        // if($poll[$i][1]==$_SESSION['id'] && $poll[$i][3]==$subject['id']){
-        //     echo "您已投過票了^ _ ^";
-        // }
+        if($poll[$i]['user_id']==$_SESSION['id'] && $poll[$i]['topic_id']==$subject['id']){
+            echo "您已投過票了^ _ ^";
+        }
     }
             foreach ($options as $key => $opt){
                 if($opt['opt']!=""){
