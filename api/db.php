@@ -2,6 +2,8 @@
 
 $dsn="mysql:host=localhost;charset=utf8;dbname=vote";
 $pdo=new PDO($dsn,'root','');
+// $dsn="mysql:host=localhost;charset=utf8;dbname=s1100403";
+// $pdo=new PDO($dsn,'s1100403','s1100403');
 session_start();
 
  //取得符合條件的一筆資料
