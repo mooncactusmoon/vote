@@ -37,3 +37,7 @@ $rows=q($sql);
 ?>
 
 </ol>
+<div class="text-center mt-5">
+
+    <a class=" btn btn-info" href="index.php">回首頁</a>
+</div>
