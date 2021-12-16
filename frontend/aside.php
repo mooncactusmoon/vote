@@ -29,7 +29,7 @@
                 <p>會員登入</p>
                 <input class="mt-3 form-control" type="text" name="account" placeholder="請輸入帳號" required>
                 <input class="mt-3 form-control" type="password" name="password" placeholder="請輸入密碼" required>
-                <input class="mt-3 btn btn-info rounded" type="reset" value="重新輸入">
+                <!-- <input class="mt-3 btn btn-info rounded" type="reset" value="重新輸入"> -->
                 <input class="mt-3 btn btn-info rounded" type="submit" value="登入">
             </div>
             </form>
