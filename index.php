@@ -57,37 +57,6 @@
 
 <body >
 
-<!-- 輪播 暫時關閉-->
-    <!-- <div class="jumbotron p-0 mb-0" style="overflow:hidden;height:200px;">
-    <a href="?">
-
-    <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
-        <div class="carousel-inner position-absolute" style="top:-250px;">
-        <?php
-            $images=all('ad',['sh'=>1]);
-            foreach($images as $key => $image){
-                if($key==0){
-                    echo "<div class='carousel-item active'>";
-                }else{
-                    echo "<div class='carousel-item'>";
-                }
-            echo "<img src='./img/{$image['name']}' alt='{$image['intro']}' class='d-block w-100'></div>";
-            }
-        ?> 
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    </a>
-    </div> -->
-<!-- 輪播 end -->
-
 <!-- nav -->
     <nav class="container-fluid bg-light shadow-sm py-2 px-2 text-right  d-flex justify-content-between my-0">
     <div class="my-0">
@@ -105,9 +74,6 @@
         echo "<script>alert('帳號或密碼錯誤，請再試一次')</script>";
         unset($_SESSION['error']);
     }
-    // if(isset($_SESSION['error'])){
-    // echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
-    // }
 
     if(isset($_SESSION['user'])){
     echo "<span class='pr-5 my-auto'>{$_SESSION['name']}歡迎，點選問卷即可加入投票唷 : )</span>";

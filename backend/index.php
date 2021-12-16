@@ -69,40 +69,6 @@ if(!isset($_SESSION['user'])){
 
 <body>
 
-<!-- 輪播  用陣列去顯示圖片-->
-
-    <!-- <div class="jumbotron p-0 mb-0" style="overflow:hidden;height:200px;">
-    <a href="index.php">
-    <div id="carouselExampleIndicators" class="carousel slide position-relative" data-ride="carousel">
-        <div class="carousel-inner position-absolute" style="top:-250px;">
-    <?php
-    $images=all('ad',['sh'=>1]);
-    foreach($images as $key => $image){
-    if($key==0){
-
-        echo "<div class='carousel-item active'>";
-    }else{
-        echo "<div class='carousel-item'>";
-
-    }
-    echo "<img src='../img/{$image['name']}' alt='{$image['intro']}' class='d-block w-100'></div>";
-    }
-
-
-    ?>      
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    </a>
-    </div> -->
-<!-- 輪播 end -->
 
 <!-- nav -->
 <nav class="bg-light shadow-sm py-2 px-2 text-right my-0 d-flex justify-content-between">
@@ -110,8 +76,7 @@ if(!isset($_SESSION['user'])){
         <!-- &nbsp; -->
         <a href="../index.php">
         <img src="../img/logo1.png" alt="LOGO" width="55px" height="40px" >
-        </a>
-        <a class="px-2" href="../index.php">回投票表列</a>
+        </a>       
     </div>
     <!-- <div> -->
         <!-- 放置功能 -->
@@ -152,11 +117,12 @@ if(isset($_SESSION['user'])){
     <div class="row-cols-1  d-flex flex-column">
         <?php
         if(isset($_SESSION['user'])){
-            echo "<span class='pr-5 mt-3 '>{$_SESSION['name']}的工作列 : )</span>";
-            
+            echo "<span class='text-center mt-3 font-weight-bold'><ins>{$_SESSION['name']}</ins></span>";
+            echo "<span class='text-center  '>的工作列</span>";
         }
         ?>
             <!-- 放置功能 -->
+            <a class="px-2 mt-3 a" href="../index.php">投票列表</a>
             <a class="px-2 mt-3 a" href="?do=show_vote_list">投票管理</a>
             <a class="px-2 mt-3 a" href="?do=member">會員管理</a>
             <?php

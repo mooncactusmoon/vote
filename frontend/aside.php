@@ -2,10 +2,12 @@
         <div class="row-cols-1 d-flex flex-column">
     <?php
     if(isset($_SESSION['user'])){
-        echo "<span class='pr-5 mt-3'>{$_SESSION['name']}的工作列 : )</span>";
+        echo "<span class='text-center mt-3 font-weight-bold'><ins>{$_SESSION['name']}</ins></span>";
+            echo "<span class='text-center  '>的工作列</span>";
         
         ?>
             <!-- 放置功能 -->
+            <a class="px-2 mt-3 a" href="./index.php">投票列表</a>
             <a class="px-2 mt-3 a" href="./backend/index.php?do=show_vote_list">投票管理</a>
             <a class="px-2 mt-3 a" href="./backend/index.php?do=member">會員管理</a>
             <?php

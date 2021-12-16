@@ -11,9 +11,9 @@ foreach ($subjects as $key => $value) {
     echo "<li class='list-group-item'>";
     // ?代表當前頁面
     // 題目
-    echo "<a class='d-inline-block col-md-8' href='../index.php?do=vote&id={$value['id']}'>";
-    echo $value['topic'];
-    echo "</a>";
+    // echo "<a class='d-inline-block col-md-8' href='../index.php?do=vote&id={$value['id']}'>";
+    echo "<span class='d-inline-block col-md-8'>".$value['topic']."</span>";
+    // echo "</a>";
 
 
     //總投票數顯示
