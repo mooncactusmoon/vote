@@ -14,7 +14,9 @@
             background-color: #f2f5f5;
             font-family: Microsoft JhengHei;
         }
-
+        nav{
+            background-color: #dfeded;
+        }
         header{
             height: 200px;
             overflow: hidden;
@@ -22,6 +24,14 @@
         section{
             height:624.5px;
             overflow: scroll;
+        }
+        .card{
+            transition: all .5s ease;
+            border-radius: 5px;
+        }
+        .card:hover{
+            box-shadow: 0px 10px 10px rgba(0,0,0,.25);
+            background-color: #dfeded;
         }
         section::-webkit-scrollbar {
         display: none;
@@ -58,7 +68,7 @@
 <body >
 
 <!-- nav -->
-    <nav class="container-fluid bg-light shadow-sm py-2 px-2 text-right  d-flex justify-content-between my-0">
+    <nav class="container-fluid shadow-sm py-2 px-2 text-right  d-flex justify-content-between my-0">
     <div class="my-0">
         <!-- &nbsp; -->
         <a href="index.php">
