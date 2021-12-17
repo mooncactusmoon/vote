@@ -53,6 +53,7 @@
         <div class="col-sm-8">
             <input type="date" class="date" id="birthday" name="birthday" required>
         </div>
+        <input type="hidden"  id="note" name="note" value="">
     </div>
     <div><input type="submit" class="btn btn-info my-5" value="確認送出"></div>
 </form>
