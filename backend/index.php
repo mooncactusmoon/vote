@@ -1,6 +1,7 @@
 <?php include_once "../api/db.php" ?>
 <?php
-if(!isset($_SESSION['user'])){
+if($_SESSION['id']!=1){ //只有管理者能看到後台
+// if(!isset($_SESSION['user'])){ //這是有登入者都能看到後台
     to("../index.php");
     exit();
 }
@@ -86,9 +87,6 @@ if(!isset($_SESSION['user'])){
     <!-- </div> -->
 <?php
 
-if(isset($_SESSION['error'])){
-    echo "<span class='float-left text-danger'>". $_SESSION['error'] ."</span>";
-}
 
 if(isset($_SESSION['user'])){
     echo "<span class='pr-5 my-auto'>{$_SESSION['name']}您好，這裡是後臺編輯區</span>";
