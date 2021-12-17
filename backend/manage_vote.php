@@ -1,5 +1,5 @@
 <h2 class="text-center mt-3 font-weight-bold">投票管理
-    <a href="?do=add_subject_form">
+    <a href="../index.php?do=add_subject_form">
         <button class="btn btn-info rounded ">新增問卷</button>
     </a>
 </h2>

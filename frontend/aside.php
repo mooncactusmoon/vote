@@ -8,11 +8,12 @@
         ?>
             <!-- 放置功能 -->
             <a class="px-2 mt-3 a" href="./index.php">投票列表</a>
-            <a class="px-2 mt-3 a" href="./backend/index.php?do=show_vote_list">投票管理</a>
-            <a class="px-2 mt-3 a" href="./backend/index.php?do=member">會員管理</a>
+            <a class="px-2 mt-3 a" href="./index.php?do=add_subject_form">新增投票</a>
+            <a class="px-2 mt-3 a" href="./index.php?do=member">會員管理</a>
             <?php
             if($_SESSION['id']==1){    
             ?>
+            <a class="px-2 mt-3 a" href="./backend/index.php?do=show_vote_list">投票管理</a>
             <a class="px-2 mt-3 a" href="./backend/index.php?do=adImg">廣告管理</a>
             
             <?php

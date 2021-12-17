@@ -14,7 +14,7 @@ $user=$pdo->query($sql)->fetch();
     <h2 class="text-center text-light pt-2"><i class="far fa-address-book">&nbsp;&nbsp;編輯會員資料</i></h2>
 </div>
 <div class="container" style="height:508px">
-<form action="../api/edit_user.php?user=<?=$_SESSION['user'];?>" method="post" id="regForm" class="text-center">
+<form action="./api/edit_user.php?user=<?=$_SESSION['user'];?>" method="post" id="regForm" class="text-center">
 <input type="hidden" name="id" value="<?=$user['id'];?>"> 
 <div class="form-group row mt-4">
     <label for="account" class="col-sm-4 col-form-label text-center "><i

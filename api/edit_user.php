@@ -16,6 +16,6 @@ $pdo->exec($sql_users);
 
 echo $sql_users;
 $_SESSION['ok']="會員資料已更新";
-to("../backend/index.php?do=member");
+to("../index.php?do=member");
 
 ?>
