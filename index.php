@@ -122,7 +122,7 @@
     if(file_exists($file)){
         include $file;
     }else{
-        include "./frontend/show_vote_list.php";
+        include "./frontend/show_vote_list&id=0.php";
     }
     
     ?>
