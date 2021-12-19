@@ -2,8 +2,10 @@
 
 
 <?php
-$subjects=all('topics');
+$subjects=all('topics',['sh'=>1]); //只顯示有開的問卷
 // echo "<ol class='list-group'>";
+
+//控制問卷排序方式
 if(isset($_GET['id'])){
     if($_GET['id']==1){
         $array=$subjects;
@@ -14,9 +16,10 @@ if(isset($_GET['id'])){
     $array=array_reverse($subjects);
     echo "<button class='btn btn-light'><a href='?do=show_vote_list&id=1'>改從舊排到新</a></button>";
 }
+//控制問卷排序方式 end
 echo "<div class='container text-center' style='font-size:20px'>";
 echo "<div class='row'>";
-//投票從新排序到舊
+
 foreach ( $array as $key => $value) {
     if(rows('options',['topic_id'=>$value['id']]) > 0){
         // echo "<li class='list-group-item'>";
