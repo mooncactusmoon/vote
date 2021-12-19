@@ -67,7 +67,7 @@ var options = {
         textStyle: {color: '#123b66'}, showColorCode: true
     },
     legend: { //欄位說明
-        position: 'left', //left,top,right,bottom,none(不顯示),in
+        position: 'left', //left,top,right,bottom,none(不顯示)
         textStyle: {color: '#405e78', fontSize: 15}
     },
     chartArea:{ //內圖與外框間距調整
