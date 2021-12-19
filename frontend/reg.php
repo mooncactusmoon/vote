@@ -12,7 +12,7 @@
                 class="fas fa-file-signature">&nbsp;&nbsp;帳號</i></label>
                 <div class=" col-sm-8">
                     <div class="row">
-                        <input type="text" class="form-control border-info" id="account" name="account" placeholder="請輸入至少8個字元" pattern="[a-zA-Z0-9]{8,}">
+                        <input type="text" class="form-control border-info" id="account" name="account" placeholder="請輸入至少8個字元"  pattern="[a-zA-Z0-9]{8,}">
                     </div>
                     <div class="row">
                         <p id="acc_p" >&nbsp;</p>
@@ -27,7 +27,7 @@
             <i class="fas fa-user-tie">&nbsp;&nbsp;姓名</i></label>
         <div class=" col-sm-8 ">
             <div class="row">
-                <input type="text" class="form-control border-info" id="name" name="name" placeholder="請輸入您的大名">
+                <input type="text" class="form-control border-info" id="name" name="name" placeholder="請輸入您的大名" >
             </div>
             <div class="row">
                 <p id="n_p">&nbsp;</p>
@@ -45,7 +45,7 @@
                 class="fas fa-mobile-alt">&nbsp;&nbsp;密碼</i></label>
                 <div class=" col-sm-8 ">
                     <div class="row">
-                        <input type="password" class="form-control border-info" id="password" name="password" placeholder="請輸入至少8個字元" pattern="[a-zA-Z0-9]{8,}" >
+                        <input type="password" class="form-control border-info" id="password" name="password"  placeholder="請輸入至少8個字元" pattern="[a-zA-Z0-9]{8,}" >
                     </div>
                     <div class="row">
                         <p id="pw_p">&nbsp;</p>
@@ -133,6 +133,14 @@
         if(document.myForm.account.value.length <8){
             acc_p.innerHTML = "<span style='color:red;'>帳號請輸入至少8個字元</span>";
             return false;
+        }else{
+            acc_p.innerHTML = "";
+        }
+        if(document.myForm.account.value.length >25){
+            acc_p.innerHTML = "<span style='color:red;'>帳號長度不得超過24個字元</span>";
+            return false;
+        }else{
+            acc_p.innerHTML = "";
         }
   
         if(document.myForm.name.value.length == 0){
@@ -141,9 +149,21 @@
         }else{
             n_p.innerHTML = "";
         }
+        if(document.myForm.name.value.length > 13 ){
+            n_p.innerHTML = "<span style='color:red;'>【姓名】最多可取12個字元</span>";       
+            return false;
+        }else{
+            n_p.innerHTML = "";
+        }
 
         if(document.myForm.password.value.length <8){
             pw_p.innerHTML = "<span style='color:red;'>密碼請輸入至少8個字元</span>";
+            return false;
+        }else{
+            pw_p.innerHTML = "";
+        }
+        if(document.myForm.password.value.length > 25){
+            pw_p.innerHTML = "<span style='color:red;'>密碼長度不得超過24個字元</span>";
             return false;
         }else{
             pw_p.innerHTML = "";
