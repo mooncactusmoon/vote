@@ -56,7 +56,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 <button class="btn btn-outline-primary rounded mt-4" style="font-size:10px;" type="button" onclick="add_opt();">+</button>
     <div id="div" class="container">
 
-        <input id="opt_t" type='text' name='options[]' value="">
+        <input id="opt_t" type='text' class="mt-2 mr-1" name='options[]' value="" placeholder="請輸入投票選項">
         <input id="opt_h" type='hidden' name='opt_id[]' value="">
     </div>
     <!-- 連接資料庫? 防止一樣的選項? -->
