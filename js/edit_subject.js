@@ -21,11 +21,14 @@ function add_opt(){
 
 //確認選項沒有重複
 function check_opt(){
-
+    let q=document.getElementById("q");
     let opt=document.getElementsByClassName("opt");
     console.log(opt.length); //取得選項數量
     let opt_l=opt.length;
-
+    if(document.vote_form.q.value.length ==0){
+        alert("投票主題不得為空白");
+        return false;
+    }
     for(let i = 0; i < (opt_l-1) ; i++){
         for(let j = 0 ; j < (opt_l - i - 1) ; j++){
             if(opt[(opt_l - 1 - i)].value == opt[j].value && opt[(opt_l - 1 - i)].value != ""){
