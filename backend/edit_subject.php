@@ -1,4 +1,4 @@
-<!-- 編輯題目(只差刪除沒有第二確認) -->
+<!-- 編輯題目 -->
 <?php
 
 $subject=find('topics',$_GET['id']);
@@ -23,7 +23,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     }
    ?>
 
-<form action="../api/edit_subject.php" method='post' class='col-6 mt-3 mx-auto'>
+<form name="vote_form" action="../api/edit_subject.php" method='post' class='col-6 mt-3 mx-auto'>
     <label>投票主題 : <input type="text" name="topic" maxlength="13" value="<?=$subject['topic'];?>" ></label>
     <input type="hidden" name="topic_id" id="topic_id" value="<?=$subject['id'];?>">
     <!-- button標籤預設是submit,所以如果不要跳轉畫面要給他type="button"//input:button -->
@@ -35,7 +35,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
         echo "<label class='list-group-item'>";
         echo "選項 " . ($key+1) . " : ";
         echo "<button name='delete' type='button' class='btn btn-danger' >刪除</button>";
-        echo "<input type='text' name='options[]' value='{$opt['opt']}'>";
+        echo "<input type='text' name='options[]' class='opt' value='{$opt['opt']}'>";
         echo "<input type='hidden' name='opt_id[]' value='{$opt['id']}'>";
         echo "</label>";
     }
@@ -56,14 +56,15 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 <button class="btn btn-outline-primary rounded mt-4" style="font-size:10px;" type="button" onclick="add_opt();">+</button>
     <div id="div" class="container">
 
-        <input id="opt_t" type='text' class="mt-2 mr-1" name='options[]' value="" placeholder="請輸入投票選項">
+        <input id="opt_t" type='text' class="mt-2 mr-1 opt" name='options[]' value="" placeholder="請輸入投票選項">
         <input id="opt_h" type='hidden' name='opt_id[]' value="">
     </div>
     <!-- 連接資料庫? 防止一樣的選項? -->
     
 <!-- 嘗試用JS動態新增選項欄位 end -->
 
-<input type="submit" value="送出" class="btn btn-primary mt-3 ">
+<!-- <input type="submit" value="送出" class="btn btn-primary mt-3 "> -->
+<input type="button" class="btn btn-info my-5" value="送出" onClick="check_opt()">
 </form>
 
 

@@ -4,8 +4,6 @@ function add_opt(){
     let opt_t=document.getElementById('opt_t').cloneNode();
     let opt_h=document.getElementById('opt_h').cloneNode();
     document.getElementById('div').appendChild(opt_t);
-    //刪除多餘的input ?
-    //限制input個數 ?
 
     let but=document.createElement('button');
     but.style="font-size:5px";
@@ -20,3 +18,23 @@ function add_opt(){
     }
     document.getElementById('div').appendChild(but);
 }     
+
+//確認選項沒有重複
+function check_opt(){
+
+    let opt=document.getElementsByClassName("opt");
+    console.log(opt.length); //取得選項數量
+    let opt_l=opt.length;
+
+    for(let i = 0; i < (opt_l-1) ; i++){
+        for(let j = 0 ; j < (opt_l - i - 1) ; j++){
+            if(opt[(opt_l - 1 - i)].value == opt[j].value && opt[(opt_l - 1 - i)].value != ""){
+                alert("有重複選項，請再次檢查");
+
+                return false;
+            }
+        }
+    }
+    
+    vote_form.submit();
+}
