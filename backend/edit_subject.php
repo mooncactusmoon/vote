@@ -24,7 +24,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
    ?>
 
 <form name="vote_form" action="../api/edit_subject.php" method='post' class='col-6 mt-3 mx-auto'>
-    <label>投票主題 : <input type="text" name="topic" id="q" maxlength="13" value="<?=$subject['topic'];?>" ></label>
+    <label>投票主題 : <input type="text" name="topic" id="edit_q" maxlength="13" value="<?=$subject['topic'];?>" ></label>
     <input type="hidden" name="topic_id" id="topic_id" value="<?=$subject['id'];?>">
     <!-- button標籤預設是submit,所以如果不要跳轉畫面要給他type="button"//input:button -->
     <!-- 增加選項(使用後端的方式，注意!按鈕選下去就會轉畫面，尚未submit的編輯選項就會不見) -->
@@ -64,7 +64,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 <!-- 嘗試用JS動態新增選項欄位 end -->
 
 <!-- <input type="submit" value="送出" class="btn btn-primary mt-3 "> -->
-<input type="button" class="btn btn-info my-5" value="送出" onClick="check_opt()">
+<input type="button" class="btn btn-info my-5" value="送出" onClick="check_edit_opt()">
 </form>
 
 

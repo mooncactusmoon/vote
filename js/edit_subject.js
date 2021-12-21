@@ -19,7 +19,7 @@ function add_opt(){
     document.getElementById('div').appendChild(but);
 }     
 
-//確認選項沒有重複
+//前台增加問卷的 確認選項沒有重複
 function check_opt(){
     let q=document.getElementById("q");
     let opt=document.getElementsByClassName("opt");
@@ -38,6 +38,32 @@ function check_opt(){
             }
         }
     }
-    
+    for(let k = 0; k <opt_l ;k++){
+        if(opt[k].value.length == 0 ){
+            alert("第" + (k+1) +"個投票選項是不是忘記輸入了 ？");
+            return false;
+        }
+    }
+    vote_form.submit();
+}
+//後台編輯投票問卷的  //確認選項不重複
+function check_edit_opt(){
+    let edit_q=document.getElementById("edit_q");
+    let opt=document.getElementsByClassName("opt");
+    console.log(opt.length); //取得選項數量
+    let opt_l=opt.length;
+    if(document.vote_form.edit_q.value.length ==0){
+        alert("投票主題不得為空白唷");
+        return false;
+    }
+    for(let i = 0; i < (opt_l-1) ; i++){
+        for(let j = 0 ; j < (opt_l - i - 1) ; j++){
+            if(opt[(opt_l - 1 - i)].value == opt[j].value && opt[(opt_l - 1 - i)].value != ""){
+                alert("有重複選項，請再次檢查");
+
+                return false;
+            }
+        }
+    }
     vote_form.submit();
 }
