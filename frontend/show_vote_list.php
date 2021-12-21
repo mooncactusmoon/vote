@@ -1,4 +1,4 @@
-<h2 class="text-center mt-3 font-weight-bold" id="title">投票題目表列</h2>
+<h2 class="text-center mt-3 font-weight-bold" id="title">可投票主題區</h2>
 
 
 <?php

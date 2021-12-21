@@ -40,8 +40,16 @@ id="myChart" class="mx-auto mt-3" style="width:200%; max-width:600px; height:400
 </div>
 
 <div class="text-center mt-5">
-    <a class=" btn btn-info" href="index.php">回首頁</a>
+    <button class=" btn btn-info" onClick="back()">回上頁</button>
 </div>
+
+<script>
+    function back(){
+        history.back();
+    }
+   
+   
+</script>
 
 <script >
 

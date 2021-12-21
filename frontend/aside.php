@@ -7,9 +7,10 @@
         
         ?>
             <!-- 放置功能 -->
-            <a class="px-2 mt-3 a" href="./index.php">投票列表</a>
-            <a class="px-2 mt-3 a" href="./index.php?do=add_subject_form">新增投票</a>
-            <a class="px-2 mt-3 a" href="./index.php?do=member">會員管理</a>
+            <a class="px-2 mt-3 a" href="./index.php">進入可投票區</a>
+            <a class="px-2 mt-3 a" href="./index.php?do=close_vote_list">查看截止投票</a>
+            <a class="px-2 mt-3 a" href="./index.php?do=add_subject_form">新增投票主題</a>
+            <a class="px-2 mt-3 a" href="./index.php?do=member">會員資料管理</a>
             <?php
             if($_SESSION['id']==1){    
             ?>
