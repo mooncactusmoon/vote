@@ -57,7 +57,7 @@ if(isset($arg[1])){
     $sql=$sql.$arg[1];
 }
 
-//echo $sql;
+// echo $sql;
 
 $rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 return $rows;
