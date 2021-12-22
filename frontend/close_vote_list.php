@@ -10,12 +10,12 @@ $subjects=all('topics',['sh'=>0]); //只顯示關閉的問卷
 if(isset($_GET['id'])){
     if($_GET['id']==1){
         $array=$subjects;
-        echo "<button class='btn btn-light'><a href='?do=show_vote_list'>改從新排到舊</a></button>";
+        echo "<button class='btn btn-light'><a href='?do=close_vote_list'>改從新排到舊</a></button>";
     }
 
     }else{
     $array=array_reverse($subjects);
-    echo "<button class='btn btn-light'><a href='?do=show_vote_list&id=1'>改從舊排到新</a></button>";
+    echo "<button class='btn btn-light'><a href='?do=close_vote_list&id=1'>改從舊排到新</a></button>";
 }
 //控制問卷排序方式 end
 echo "<div class='container text-center' style='font-size:20px'>";

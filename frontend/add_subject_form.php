@@ -1,4 +1,11 @@
 <!-- 新增問卷 完成 -->
+<?php 
+if(!isset($_SESSION['user'])){ //這是有登入者都能看到
+    to("index.php");
+    exit();
+}
+?>
+
 <h2 class="text-center my-3 font-weight-bold">增加投票問卷</h2>
 <form action="./api/new_subject.php" method='post' class='col-6 m-auto' name="vote_form">
  
