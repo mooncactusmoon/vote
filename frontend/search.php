@@ -43,7 +43,7 @@ foreach($search1 as $key => $value){
     echo "</span></p>";
     
     //看結果按鈕
-    echo "<a href='?do=vote_result&id={$value['id']}' class=' text-center p-0'>";
+    echo "<a href='?do=s_vote_result&id={$value['id']}' class=' text-center p-0'>";
     echo "<button class='btn-info rounded mb-2'>觀看結果</button>";
     echo "</a>";
 
@@ -79,7 +79,7 @@ foreach($search2 as $key => $value){
     echo "</span></p>";
     
     //看結果按鈕
-    echo "<a href='?do=vote_result&id={$value['id']}' class=' text-center p-0'>";
+    echo "<a href='?do=s_vote_result&id={$value['id']}' class=' text-center p-0'>";
     
     echo "<button class='btn-info rounded mb-2'>觀看結果</button>";
     echo "</a>";
