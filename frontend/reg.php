@@ -2,12 +2,11 @@
 <div class="header box box1 border rounded-pill mt-3 bg-info shadow">
     <h2 class="text-center text-light pt-2"><i class="far fa-address-book">&nbsp;&nbsp;註冊會員</i></h2>
 </div>
-<div class="container" style="height:508px">
+<div class="container" style="height:508px" class="p-2">
 <form action="./api/reg.php" method="post" name="myForm" class="text-center">
-    <div class="form-group row mt-4">
+    <div class="form-group row mt-4 p-2">
         <div class="col-6">
             <div class="row">
-
                 <label for="account" class="col-sm-4 col-form-label text-center "><i
                 class="fas fa-file-signature">&nbsp;&nbsp;帳號</i></label>
                 <div class=" col-sm-8">
@@ -37,7 +36,7 @@
         </div>
     </div>
     
-    <div class="form-group row ">
+    <div class="form-group row p-2">
         <div class="col-6">
             <div class="row">
 
@@ -54,8 +53,7 @@
             </div>
         </div>
         <div class="col-6">
-            <div class="row">
-
+            <div class="row ">
                 <label for="password" class="col-sm-4 col-form-label text-center "><i
                         class="fas ">確認密碼</i></label>
                 <div class=" col-sm-8 ">
@@ -70,7 +68,7 @@
         </div>
     </div>
 
-    <div class="form-group row ">
+    <div class="form-group row p-2">
         <label for="email" class="col-sm-2 col-form-label text-center"><i class="fas fa-at ">&nbsp;&nbsp;信箱</i></label>
         <div class="col-sm-10">
             <div class="row">
@@ -81,9 +79,9 @@
             </div>
         </div>
     </div>
-    <div class="form-group row ">
-        <legend class="col-form-label col-sm-4 text-center"><i class="fas fa-mars-stroke">&nbsp;&nbsp;性別</i></legend>
-            <div class="col-sm-8">
+    <div class="form-group row p-3">
+        <legend class="col-form-label col-sm-2 text-left"><i class="fas fa-mars-stroke">&nbsp;&nbsp;性別</i></legend>
+            <div class="col-sm-10">
                 <div class="form-check-inline mr-5">  
                     <input class="form-check-input " type="radio" name="gender" id="man" value="man" checked>
                     <label class="form-check-label" for="man">男生</label>
@@ -98,19 +96,21 @@
                 </div>
             </div>
     </div>
-    <div class="form-group row ">
-        <label for="birthday" class="col-sm-4 col-form-label text-center">
+    <div class="form-group row p-4">
+        <label for="birthday" class="col-sm-2 col-form-label text-left">
             <i class="fas fa-birthday-cake">&nbsp;&nbsp;生日</i></label>
-        <div class="col-sm-8">
+        <div class="col-sm-4 ">
             <div class="row">
-
                 <input type="date" class="date" id="birthday" name="birthday" >
             </div>
             <div class="row"><p id="date_p">&nbsp;</p></div>
         </div>
         <input type="hidden"  id="note" name="note" value="">
+        <div class="col-sm-6 text-right">
+            <input type="button" class="btn btn-info" value="加入會員" onClick="check_date()">
+
+        </div>
     </div>
-    <div><input type="button" class="btn btn-info my-5" value="加入會員" onClick="check_date()"></div>
 </form>
 </div>
 <!-- javascrpit -->
