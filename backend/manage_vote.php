@@ -17,18 +17,23 @@ if(isset($_GET['id'])){
     if($_GET['id']==1){
         $array=$subject;
         echo "<button class='btn btn-light my-3'><a href='?do=manage_vote'>改從新排到舊</a></button>";
+        if(($now-1)>0){
+            $p=$now-1;
+            echo "<a href='?do=close_vote_list&id=1&p=$p'><i class='fas fa-angle-double-left mx-2'></i></a>";
+        }
+
         for($i=1;$i<=$pages;$i++){
             if($i==$now){ //判斷頁碼是否當前頁面
                 $fontsize="24px";
             }else{
                 $fontsize="16px";
             }
-            echo "<a href='?do=manage_vote&id=1&p=$i'>&nbsp;$i&nbsp;</a>";
+            echo "<a href='?do=manage_vote&id=1&p=$i' style='font-size:$fontsize;' class='mx-1'>&nbsp;$i&nbsp;</a>";
          }
          
          if(($now+1)<=$pages){
             $p=$now+1;
-            echo "<a href='?do=manage_vote&id=1&p=$p'><i class='fas fa-angle-double-right'></i></a>";
+            echo "<a href='?do=manage_vote&id=1&p=$p'><i class='fas fa-angle-double-right mx-1'></i></a>";
          }
     }
 
@@ -37,7 +42,7 @@ if(isset($_GET['id'])){
     echo "<button class='btn btn-light my-3'><a href='?do=manage_vote&id=1'>改從舊排到新</a></button>";
     if(($now-1)>0){
         $p=$now-1;
-        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-left'></i></a>";
+        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-left mx-2'></i></a>";
      }
      for($i=1;$i<=$pages;$i++){
         if($i==$now){ //判斷頁碼是否當前頁面
@@ -45,12 +50,12 @@ if(isset($_GET['id'])){
         }else{
             $fontsize="16px";
         }
-        echo "<a href='?do=manage_vote&p=$i'>&nbsp;$i&nbsp;</a>";
+        echo "<a href='?do=manage_vote&p=$i' style='font-size:$fontsize;' class='mx-1'>&nbsp;$i&nbsp;</a>";
      }
      
      if(($now+1)<=$pages){
         $p=$now+1;
-        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-right'></i></a>";
+        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-right mx-1'></i></a>";
      }
 }
 //控制問卷排序方式 end
