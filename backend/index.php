@@ -22,7 +22,9 @@ if ($_SESSION['id'] != 1) { //只有管理者能看到後台
             background-color: #f2f5f5;
             font-family: Microsoft JhengHei;
         }
-
+        h2{
+            color:#1c275e;
+        }
         header {
             height: 200px;
             overflow: hidden;
@@ -130,19 +132,19 @@ if ($_SESSION['id'] != 1) { //只有管理者能看到後台
                 }
                 ?>
                 <!-- 放置功能 -->
-                <a class="px-2 mt-3 a" href="../index.php">進入可投票區</a>
+                <a class="px-2 mt-3 a" href="../index.php">進入當期投票</a>
                 <a class="px-2 mt-3 a" href="../index.php?do=close_vote_list">查看截止投票</a>
                 <a class="px-2 mt-3 a" href="../index.php?do=add_subject_form">新增投票主題</a>
                 <a class="px-2 mt-3 a" href="../index.php?do=member">會員資料管理</a>
                 <?php
                 if ($_SESSION['id'] == 1) {
                 ?>
-                    <a class="px-2 mt-3 a" href="?do=show_vote_list">投票管理</a>
+                    <a class="px-2 mt-3 a" href="?do=manage_vote">投票管理</a>
                     <a class="px-2 mt-3 a" href="?do=adImg">廣告管理</a>
 
                 <?php
                 }
-                echo "<a href='../logout.php' class='btn-sm mt-5 btn-warning w-75 mx-auto'>登出</a>";
+                echo "<a href='../logout.php' class='btn-sm mt-5 btn-warning w-75 mx-auto'><i class='fas fa-sign-out-alt'>登出</i></a>";
                 ?>
             </div>
         </aside>

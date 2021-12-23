@@ -7,19 +7,19 @@
             echo "<span class='text-center  '>的工作列</span>";
 
         ?>
-            <a class="px-2 mt-3 a" href="./index.php">進入可投票區</a>
+            <a class="px-2 mt-3 a" href="./index.php">進入當期投票</a>
             <a class="px-2 mt-3 a" href="./index.php?do=close_vote_list">查看截止投票</a>
             <a class="px-2 mt-3 a" href="./index.php?do=add_subject_form">新增投票主題</a>
             <a class="px-2 mt-3 a" href="./index.php?do=member">會員資料管理</a>
             <?php
             if ($_SESSION['id'] == 1) {
             ?>
-                <a class="px-2 mt-3 a" href="./backend/index.php?do=show_vote_list">投票管理</a>
+                <a class="px-2 mt-3 a" href="./backend/index.php?do=manage_vote">投票管理</a>
                 <a class="px-2 mt-3 a" href="./backend/index.php?do=adImg">廣告管理</a>
 
             <?php
             }
-            echo "<a href='logout.php' class='btn-sm mt-5 btn-warning w-75 mx-auto'>登出</a>";
+            echo "<a href='logout.php' class='btn-sm mt-5 btn-warning w-75 mx-auto'><i class='fas fa-sign-out-alt'>登出</i></a>";
             ?>
         <?php
         } else {

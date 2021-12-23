@@ -9,7 +9,7 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     <div class="row">
         <div class="col-8">
 
-            <h2 class="text-right mt-3 font-weight-bold">編輯投票問卷</h2>
+            <h2 class="text-right mt-3 font-weight-bold">編輯投票問卷 <i class="fas fa-tools"></i></h2>
         </div>
         <div class="col-4">
             <button class="btn btn-outline-danger btn-sm mt-3" id="d" >刪除此投票</button>

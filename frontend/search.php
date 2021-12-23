@@ -15,7 +15,7 @@ function find_like($table, $topic,$sh) {
 }
 ?>
 
-<h2 class="text-center mt-3 font-weight-bold text-secondary"><i class="fas fa-search"></i>搜尋"<?=$_POST['search']?>"的結果</h2>
+<h2 id="title" class="text-center mt-3 font-weight-bold text-secondary"><i class="fas fa-search"></i>搜尋"<?=$_POST['search']?>"的結果</h2>
 <h4 class="text-center mt-4 font-weight-bold text-danger"><i class="fas fa-fire "></i>當期投票</h4>
 <?php
 $search1=find_like('topics',['topic'=>$_POST['search']],1); //已開啟的問卷
@@ -93,5 +93,7 @@ if(count($search2)==0){
     echo "查無相關問卷";
 }
 //顯示關閉問卷 END
+echo "<div >";
+echo "<br><br><a href='#title' class='text-center'>TOP</a> ";
+echo "</div>";
 ?>
-<br><br>

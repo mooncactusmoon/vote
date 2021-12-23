@@ -7,7 +7,7 @@
 ?>
 <div class="container">
 
-    <h2 class="text-center my-3 font-weight-bold">廣告圖片管理</h2>
+    <h2 class="text-center my-3 font-weight-bold">廣告圖片管理 <i class="fas fa-ad"></i></h2>
     
     <div class="row">
         <div class="input-group ml-5">

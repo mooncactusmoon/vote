@@ -6,7 +6,7 @@ if(!isset($_SESSION['user'])){ //這是有登入者都能看到
 }
 ?>
 
-<h2 class="text-center my-3 font-weight-bold">增加投票問卷</h2>
+<h2 class="text-center my-3 font-weight-bold">增加投票問卷 <i class="fas fa-folder-plus"></i></h2>
 <form action="./api/new_subject.php" method='post' class='col-6 m-auto' name="vote_form">
  
     <input style="width:300px;height:50px;font-size:20px;" id="q" type="text" name="subject" maxlength="13" placeholder="請輸入投票主題(13個字元內)" required>

@@ -14,7 +14,9 @@
             background-color: #f2f5f5;
             font-family: Microsoft JhengHei;
         }
-
+        h2{
+            color:#1c275e;
+        }
         nav {
             background-color: #dfeded;
         }

@@ -1,20 +1,57 @@
-<h2 class="text-center mt-3 font-weight-bold">投票管理
-    <a href="../index.php?do=add_subject_form">
-        <button class="btn btn-info rounded ">新增投票</button>
-    </a>
-</h2>
+<h2 class="text-center mt-3 font-weight-bold">投票管理 <i class="fas fa-tasks"></i>
+    </h2>
 <?php
 $subjects=all('topics');
+$s="SELECT count(*) FROM `topics`";
+$num=$pdo->query($s)->fetchColumn();
+$div=8; //設定每頁要幾個問卷
+$pages=ceil($num/$div); //頁數
+$now=$_GET['p']??1; //當前頁
+$start=($now-1)*$div;
+$sq="SELECT * FROM `topics` LIMIT $start,$div"; //由舊到新
+$sq2="SELECT * FROM `topics` ORDER BY `id` DESC LIMIT $start,$div;";//新到舊
+$subject=$pdo->query($sq)->fetchAll(PDO::FETCH_ASSOC);
+$subject2=$pdo->query($sq2)->fetchAll(PDO::FETCH_ASSOC);
 //控制問卷排序方式
 if(isset($_GET['id'])){
     if($_GET['id']==1){
-        $array=$subjects;
-        echo "<button class='btn btn-light'><a href='?do=show_vote_list'>改從新排到舊</a></button>";
+        $array=$subject;
+        echo "<button class='btn btn-light my-3'><a href='?do=manage_vote'>改從新排到舊</a></button>";
+        for($i=1;$i<=$pages;$i++){
+            if($i==$now){ //判斷頁碼是否當前頁面
+                $fontsize="24px";
+            }else{
+                $fontsize="16px";
+            }
+            echo "<a href='?do=manage_vote&id=1&p=$i'>&nbsp;$i&nbsp;</a>";
+         }
+         
+         if(($now+1)<=$pages){
+            $p=$now+1;
+            echo "<a href='?do=manage_vote&id=1&p=$p'><i class='fas fa-angle-double-right'></i></a>";
+         }
     }
 
     }else{
-    $array=array_reverse($subjects);
-    echo "<button class='btn btn-light'><a href='?do=show_vote_list&id=1'>改從舊排到新</a></button>";
+        $array=$subject2;
+    echo "<button class='btn btn-light my-3'><a href='?do=manage_vote&id=1'>改從舊排到新</a></button>";
+    if(($now-1)>0){
+        $p=$now-1;
+        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-left'></i></a>";
+     }
+     for($i=1;$i<=$pages;$i++){
+        if($i==$now){ //判斷頁碼是否當前頁面
+            $fontsize="24px";
+        }else{
+            $fontsize="16px";
+        }
+        echo "<a href='?do=manage_vote&p=$i'>&nbsp;$i&nbsp;</a>";
+     }
+     
+     if(($now+1)<=$pages){
+        $p=$now+1;
+        echo "<a href='?do=manage_vote&p=$p'><i class='fas fa-angle-double-right'></i></a>";
+     }
 }
 //控制問卷排序方式 end
 $cou=count($array);
@@ -25,11 +62,7 @@ echo "<ol class='list-group'>";
 foreach ($array as $key => $value) {
     
     echo "<li class='list-group-item'>";
-    // ?代表當前頁面
-    // 題目
-    // echo "<a class='d-inline-block col-md-8' href='../index.php?do=vote&id={$value['id']}'>";
     echo "<span class='d-inline-block col-md-6 t'>".$value['topic']."</span>";
-    // echo "</a>";
 
 
     // 投票開啟或關閉
@@ -56,14 +89,3 @@ foreach ($array as $key => $value) {
 echo "</ol>";
 
 ?>
-<!-- 嘗試做投票標題隨狀態變色(未完成) -->
-<!-- <script>
-let cou=document.getElementById("cou");
-let t=document.getElementsByClassName("t");
-let sh=document.getElementsByClassName("sh");
-    if(sh.innerHTML="開啟中"){
-    t.style = "color:black";
-    }else{
-    t.style = "color:red";
-    }
-</script> -->
